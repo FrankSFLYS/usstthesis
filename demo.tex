@@ -1,0 +1,50 @@
+\documentclass{usstthesis}
+
+\usstthesisset{%
+    session=2015,   % 2015 届
+    title=上海理工大学本科毕业设计(论文) \LaTeX 文档类, % 论文中文标题
+    titleen=A \LaTeX{} document class for the Final Project/Thesis for Undergraduates of USST,  % 论文英文标题
+    institute=光电信息与计算机工程学院, % 学院
+    major=计算机科学与技术, % 专业
+    name=你的名字,  % 姓名
+    number=1234567, % 学号
+    mentor=指导教师,    % 指导教师
+    date=2019年1月1日   % 完成日期
+}
+
+\lstset{language=C}
+
+\renewcommand{\arraystretch}{1.1}   % 表格行高 1.1 倍
+
+\begin{document}
+\outputfrontmatter  % 输出封面、承诺书、摘要和目录
+% 注意，摘要请在 ./elements/abstract.tex 编辑
+    
+\mainmatter % 中间内容
+% 可以使用分文件编辑，最后 input 每个章节
+\input{elements/chapter1.tex} % 论文的内容要求
+% 也可以直接在此文件中编写，但是比较乱
+\chapter{论文的格式要求}
+\par 论文的格式要求包括：纸张大小、纸张方向、页边距、版式、文档网格、字体与字号、段落和间距等\cite{机器学习}。
+\par 建议采用 \LaTeX2e 语法和 \verb|xelatex| 引擎编译。
+\par 由于论文格式问题非常繁杂，无法将所有设置描述清楚，只能对一些主要的设置做出扼要的说明。一个快捷有效的方法就是把本规范的电子版作为模板。
+\par 小贴士：使用 \verb|xelatex| 编译时，可以直接生成双面打印的 PDF 文件。如果需要编译两次生成交叉引用，第一次编译时加入 \verb|--no-pdf| 选项可以加快编译速度。
+
+\lstinputlisting[caption=code.c]{code/code.c}
+
+\captionof{lstlisting}{main.h}
+\begin{lstlisting}
+int main(int argc, char* argv[]);
+\end{lstlisting}
+
+\input{elements/chapter2.tex} % 论文的格式要求
+\input{elements/chapter3.tex} % 论文的写作细则
+% 表格、插图等内容在 elements/chapter3.tex 中有所体现
+
+\backmatter % 结尾内容
+
+\input{elements/citation.tex}
+\input{elements/thanking.tex} % 致谢
+
+
+\end{document}
