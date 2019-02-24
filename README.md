@@ -1,6 +1,6 @@
 # 上海理工大学本科毕业设计(论文) LaTeX 文档类
 
-[![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()[![Version](https://img.shields.io/badge/version-2-yellow.svg)]()
+[![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()  [![Version](https://img.shields.io/badge/version-2-yellow.svg)]()
 
 **作者：[MkSwQi](http://frank.xin)**
 
@@ -79,7 +79,6 @@
 \section{第一小节}
 
 \backmatter % 论文附加部分
-\chapter{参考文献}
 \begin{citelist}	% 参考文献
     \bibitem{机器学习}刘琴.机器学习[J].武汉工程职业技术学院学报,2001,13(2):41-44.
 \end{citelist}
@@ -108,8 +107,8 @@
 ​        同时也建议，在文档主体中不直接写内容，而是使用 `\input{<filename>}`命令，将文档按照章节分开每个文件，例如：
 
 ``` latex
-\input{chapters/chap1.tex}
-\input{chapters/chap2.tex}
+\input{chapter/chap1.tex}
+\input{chapter/chap2.tex}
 ```
 
 ​        其中，`chap*.tex` 中不应该包含 `\begin{document} `和 `\end{document}`，而应该直接写正文内容，例如：
@@ -167,7 +166,7 @@
 ### 代码
 
 ​        为了方便编译和视觉效果的统一，文档使用 `listings` 宏包插入代码。可以在导言区设置使用的语言，例如使用 C 语言：`\lstset{language=C}`，使用时也可以进行设置，具体用法请参考 `listings` 宏包文档 [listings.pdf](http://mirrors.ctan.org/macros/latex/contrib/listings/listings.pdf)。其基本使用方法如下：
-1. 行内代码，使用 `\lstinline|内容|`（注意在前后插入空格，否则在中文环境中它会和文字连在一起），使用方法和 `\verbatim|内容|` 类似，前后两个竖线作为和普通文本的分界符，可以替换为其他字符，但是前后两个一定要相同，例如可以替换为 `\lstinline[内容[`；
+1. 行内代码，使用 `\lstinline|内容|`（注意在命令的插入空格，否则在中文环境中它会和文字连在一起），使用方法和 `\verbatim|内容|` 类似，两个竖线作为和普通文本的分界符，可以替换为其他字符，但是前后一定要相同，例如可以替换为 `\lstinline[内容[`；
 
 2. 代码段，直接在文中插入时，使用 `lstlisting` 环境，并且在环境外面使用 `\captionof{lstlisting}{标题内容}`，例如：
 
@@ -180,7 +179,7 @@
 
    会生成如下图所示的文档。
 
-   ![1550982750053](../images/1550982750053.png)
+   ![main.h](./elements/1550982750053.png)
 
 3. 插入代码文件中的内容，使用 `\lstinputlisting[caption=标题名称]{文件路径/文件名}` 命令，建议将代码源文件放在 `listing` 文件夹中。
 
