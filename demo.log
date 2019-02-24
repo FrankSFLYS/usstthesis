@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  24 FEB 2019 12:32
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  24 FEB 2019 13:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1897,12 +1897,7 @@ Underfull \vbox (badness 3049) has occurred while \output is active []
 ])
 [2]
 第2章
-(./code/code.c [3
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4])
+(./listing/code.c)
 
 Package caption Warning: \captionsetup{type*=...} or \captionof
 (caption)                outside box or environment on input line 35.
@@ -1913,22 +1908,24 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 35.
 See the caption package documentation for explanation.
 
-(./elements/chapter2.tex [5]
+(./elements/chapter2.tex [3
+
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6])
-(./elements/chapter3.tex [7] [8
+ [4])
+(./elements/chapter3.tex [5] [6
 
 ]
 第3章
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
+ [7]
 File: resource/egf.png Graphic file (type bmp)
 <resource/egf.png>
 
-[10]) [11] [12
+[8]) [9] [10
 
 ] (./elements/citation.tex
 Underfull \hbox (badness 4752) in paragraph at lines 3--4
@@ -1937,9 +1934,9 @@ Underfull \hbox (badness 4752) in paragraph at lines 3--4
 m/n/12.045 [J]. \TU/SimSun(0)/m/n/12.045 科
  []
 
-) (./elements/thanking.tex [13
+) (./elements/thanking.tex [11
 
-] [14
+] [12
 
 ]
 
@@ -1949,7 +1946,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
- [15]
+ [13]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
  (./demo.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 50.
@@ -1968,11 +1965,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
  ) 
 Here is how much of TeX's memory you used:
  27872 strings out of 492970
- 563184 string characters out of 6137297
- 706324 words of memory out of 5000000
+ 563193 string characters out of 6137297
+ 674322 words of memory out of 5000000
  31500 multiletter control sequences out of 15000+600000
  543693 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,15n,94p,10407b,1876s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,15n,94p,10407b,1159s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on demo.pdf (25 pages).
+Output written on demo.pdf (23 pages).

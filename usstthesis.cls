@@ -129,7 +129,7 @@
 
 \newcommand{\tableCapSet}{ %    调节表格标题和上下文的间距
 \setlength{\abovecaptionskip}{.1cm} %
-\setlength{\belowcaptionskip}{-.2cm} %
+\setlength{\belowcaptionskip}{0cm} %
 }
 \newcommand{\figureCapSet}{ %   调节图片标题和上下文的间距
 \setlength{\abovecaptionskip}{.1cm} %
