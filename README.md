@@ -2,7 +2,7 @@
 
 [![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()[![Version](https://img.shields.io/badge/version-2-yellow.svg)]()
 
-**作者：[frank.xin](http://frank.xin)**
+**作者：[MkSwQi](http://frank.xin)**
 
 ## 注意事项
 
