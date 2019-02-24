@@ -64,7 +64,7 @@
         format = {\bfseries\bZhongsong\centering\zihao{3}},
         pagestyle = fancy,
         beforeskip = 25pt,
-        afterskip = 30pt
+        afterskip = 33pt
     },
     section = {
         fixskip = true,
@@ -245,7 +245,7 @@
 \\ \rule{0em}{20ex}
 \begin{flushright}
     \renewcommand\arraystretch{1.0}
-    \begin{tabularx}{8cm}{*{2}{>{\raggedleft\arraybackslash}X}}
+    \begin{tabularx}{9.5cm}{*{2}{>{\raggedleft\arraybackslash}X}}
         承诺人(签名)： &    \\  \cline{2-2}
         & \\
         日期： & 年 \hspace{1\ccwd} 月 \hspace{1\ccwd} 日 \\
