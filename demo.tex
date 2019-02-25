@@ -12,9 +12,9 @@
     date=2019年1月1日   % 完成日期
 }
 
-\lstset{language=C}
+\lstset{language=C} % 代码清单使用的是 C 语言
 
-\renewcommand{\arraystretch}{1.1}   % 表格行高 1.1 倍
+\renewcommand{\arraystretch}{1.2}   % 表格行高 1.2 倍
 
 \begin{document}
 \outputfrontmatter  % 输出封面、承诺书、摘要和目录
@@ -22,29 +22,15 @@
     
 \mainmatter % 中间内容
 % 可以使用分文件编辑，最后 input 每个章节
-\input{elements/chapter1.tex} % 论文的内容要求
 % 也可以直接在此文件中编写，但是比较乱
-\chapter{论文的格式要求}
-\par 论文的格式要求包括：纸张大小、纸张方向、页边距、版式、文档网格、字体与字号、段落和间距等\cite{机器学习}。
-\par 建议采用 \LaTeX2e 语法和 \verb|xelatex| 引擎编译。
-\par 由于论文格式问题非常繁杂，无法将所有设置描述清楚，只能对一些主要的设置做出扼要的说明。一个快捷有效的方法就是把本规范的电子版作为模板。
-\par 小贴士：使用 \verb|xelatex| 编译时，可以直接生成双面打印的 PDF 文件。如果需要编译两次生成交叉引用，第一次编译时加入 \verb|--no-pdf| 选项可以加快编译速度。
-
-\lstinputlisting[caption=code.c]{listing/code.c}
-
-\captionof{lstlisting}{main.h}
-\begin{lstlisting}
-int main(int argc, char* argv[]);
-\end{lstlisting}
-
-\input{elements/chapter2.tex} % 论文的格式要求
-\input{elements/chapter3.tex} % 论文的写作细则
-% 表格、插图等内容在 elements/chapter3.tex 中有所体现
+\input{chapter/chapter0.tex} % 引言
+\input{chapter/chapter1.tex} % 论文的内容要求
+\input{chapter/chapter2.tex} % 论文的格式要求
+\input{chapter/chapter3.tex} % 论文的写作细则
+% 表格、插图等内容在 chapter/chapter3.tex 中有所体现
 
 \backmatter % 结尾内容
-
-\input{elements/citation.tex}
-\input{elements/thanking.tex} % 致谢
-
+\input{chapter/citation.tex}
+\input{chapter/thanking.tex} % 致谢
 
 \end{document}

@@ -138,9 +138,10 @@
 
 \RequirePackage{listings}   % 代码环境
 \RequirePackage{newfloat}
-\colorlet{codegreen}{green!60!black}
+\colorlet{codeblue}{blue!15!black}
+\colorlet{codegreen}{green!10!black}
 \colorlet{codegray}{red!50!green!50!blue}
-\colorlet{codemauve}{red!58!blue}
+\colorlet{codemauve}{red!58!blue!60!black}
 %\RequirePackage[newfloat]{minted}      % \SetupFloatingEnvironment{}{}
 \lstset{ %
 	backgroundcolor=\color{white},   % choose the background color
@@ -152,7 +153,7 @@
 	tabsize=4,
 	commentstyle=\color{codegreen},    % comment style
 	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-	keywordstyle=\color{blue},       % keyword style
+	keywordstyle=\color{codeblue},       % keyword style
 	stringstyle=\color{codemauve}\ttfamily,     % string literal style
 	frame=single,
 	frameround=fttt,
@@ -208,7 +209,7 @@
 \thispagestyle{empty}
 \begin{titlepage}
 \makeatletter
-\noindent\includegraphics[width=6.96cm,height=1.69cm]{resource/usst-text.jpg}%
+\noindent\includegraphics[width=6.96cm,height=1.69cm]{element/usst-text.jpg}%
 \\[1.82cm]
 \begin{center}
     {\bKai\fontsize{33}{35}\selectfont 本科毕业设计(论文)} \\[0.19cm]
@@ -252,7 +253,7 @@
     \end{tabularx}
 \end{flushright}
 \afterpage{\thispagestyle{empty}}
-\input{elements/abstract.tex}
+\input{chapter/abstract.tex}
 
 \cleardoublepage
 %\setcounter{page}{1}

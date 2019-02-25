@@ -21,7 +21,9 @@
 
 ### 更多
 
-​        关于文档的更多用法，可以参阅 `demo.tex` 及其附加内容，也可以在其之上修改，直接生成你的文档。
+​        关于文档的更多用法，可以参阅 `demo.tex` 及其附加内容，也可以在其之上修改，直接生成你的文档。本文档类仅在 Windows 平台和 Linux 平台的 TeXLive 测试通过，其中，Linux 需要安装有 Times New Roman 字体集。
+
+​        包附带的三种字体使用方法分别为：华文中宋加粗：`{\bZhongsong 华文中宋粗体}`，华文中宋正体：`{\Zhongsong 华文中宋}`，宋体加粗：`{\bSong 宋体粗体}`，楷体加粗：`{\bKai 楷体粗体}`。**注意：**如果要加粗的字体中同时有中英文，还需要再加上 `\bfseries`，此时编译会报字体警告，可以忽略。
 
 ​        使用过程中有任何问题或者建议，欢迎在 Gitee 上提交 issue 或 Pull Request。
 
@@ -83,12 +85,12 @@
     \bibitem{机器学习}刘琴.机器学习[J].武汉工程职业技术学院学报,2001,13(2):41-44.
 \end{citelist}
 
-\input{elements/thanking.tex} % 致谢
+\input{chapter/thanking.tex} % 致谢
 
 \end{document} % 文档结束
 ```
 
-​        其中，`citelist` 环境是封装了的 `thebibliography`，使用方法与 `thebibliography`相同，并且可以自动将“参考文献”添加到目录中。另外，为了主体结构清晰，将摘要和 ABSTRACT 放在了 `elements/abstract.tex` 中，`abstract.tex`的内容如下：
+​        其中，`citelist` 环境是封装了的 `thebibliography`，使用方法与 `thebibliography`相同，并且可以自动将“参考文献”添加到目录中。另外，为了主体结构清晰，将摘要和 ABSTRACT 放在了 `chapter/abstract.tex` 中，`abstract.tex`的内容如下：
 
 ```latex
 % 中文摘要
@@ -130,7 +132,7 @@
 \begin{figure}[htb]
     \figureCapSet	% 调节图片环境的 caption 间距
     \centering
-    \includegraphics[width=.8\linewidth]{resource/egf.png}
+    \includegraphics[width=.8\linewidth]{figure/egf.png}
     \caption{信息传播模型} % 将 caption 放在 \includegraphics 下方，表示 caption 在图片下方
     \label{figure:model}
 \end{figure}
@@ -179,14 +181,14 @@
 
    会生成如下图所示的文档。
 
-   ![main.h](./elements/1550982750053.png)
+   ![main.h](./element/1550982750053.png)
 
 3. 插入代码文件中的内容，使用 `\lstinputlisting[caption=标题名称]{文件路径/文件名}` 命令，建议将代码源文件放在 `listing` 文件夹中。
 
 ## 参考文献
 
-​        文档使用默认的参考文献处理方式（使用了 `cite` 宏包），建议将参考文献的内容单独放在 `elements/citation.tex` 中，在文中使用 `\input{elements/citation.tex}` 包含。参考文献的格式可以参考文件内容，主流的学术搜索网站可以直接生成参考文献内容，复制到 `citation.tex` 中的 `\bibitem{}` 条目中即可。
+​        文档使用默认的参考文献处理方式（使用了 `cite` 宏包），建议将参考文献的内容单独放在 `chapter/citation.tex` 中，在文中使用 `\input{chapter/citation.tex}` 包含。参考文献的格式可以参考文件内容，主流的学术搜索网站可以直接生成参考文献内容，复制到 `citation.tex` 中的 `\bibitem{}` 条目中即可。
 
 ## 致谢
 
-​        致谢的内容请在 `elements/thanking.tex` 中编辑，并且在正文中使用 `\inout{elements/thanking.tex}` 导入。
+​        致谢的内容请在 `chapter/thanking.tex` 中编辑，并且在正文中使用 `\inout{chapter/thanking.tex}` 导入。

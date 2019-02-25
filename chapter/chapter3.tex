@@ -1,4 +1,5 @@
 \chapter{论文的写作细则}
+\label{chap:details}
 \section{书写}
 \par 正文中的任何部分，如表、图，应限制在版心的范围以内，不要超出版心的范围。
 \par 汉字必须使用国家公布的规范字。
@@ -58,10 +59,20 @@
 \begin{figure}[htb]
     \figureCapSet
     \centering
-    \includegraphics[width=.8\linewidth]{resource/egf.png}
+    \includegraphics[width=.8\linewidth]{figure/egf.png}
     \caption{信息传播模型}
     \label{figure:model}
 \end{figure}
+
+\section{代码段}
+\par 本文档类提供了两种插入代码的方式，其中第一种是使用代码文件插入，使用方法为：\lstinline|\lstinputlisting[caption=xxx]{listing/xxx.c}|。
+\lstinputlisting[caption=code.c]{listing/code.c}
+
+\par 第二种方法是直接在正文当中编辑，使用 \lstinline|lstlisting| 环境，使用 \lstinline|captionof{lstlisting}{xxx}| 标记标题。
+\captionof{lstlisting}{main.h}
+\begin{lstlisting}
+int main(int argc, char* argv[]);
+\end{lstlisting}
 
 \section{参考文献}
 \par 参考文献是毕业设计（论文）中引用文献出处的目录表，一律放在文后。书写格式按国家标准GB7714-87规定。
