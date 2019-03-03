@@ -63,8 +63,9 @@
         number = \arabic{chapter},
         format = {\bfseries\bZhongsong\centering\zihao{3}},
         pagestyle = fancy,
-        beforeskip = 25pt,
-        afterskip = 33pt
+        fixskip = true,
+        beforeskip = 49pt,
+        afterskip = 35pt
     },
     section = {
         fixskip = true,
@@ -75,7 +76,9 @@
     subsection = {
         beforeskip = 0.5ex,
         format = \bfseries\bSong\zihao{-4},
-        afterskip = 0pt
+        fixskip = true,
+        beforeskip = 13pt,
+        afterskip = 9pt,
     }
 }
 
@@ -102,6 +105,8 @@
 \fancyhead[CO]{\zihao{-5}\usstthesis@title}
 \fancyhead[CE]{\zihao{-5}上海理工大学本科毕业设计(论文)}
 \fancyfoot[RO,LE]{\thepage}
+\renewcommand{\headrulewidth}{0.8pt}    % 页眉线粗细
+\setlength{\headheight}{16pt}   % 页眉线与顶端距离
 \pagestyle{fancy}
 \fancypagestyle{plain}{%
     \fancyhead{} %

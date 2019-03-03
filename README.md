@@ -74,7 +74,7 @@
 
 \begin{document} % 开始文档
 \outputfrontmatter % 输出 1~5 的内容
-% 注意，摘要和 ABSTRACT 的内容请在 ./elements/abstract.tex 中
+% 注意，摘要和 ABSTRACT 的内容请在 ./chapter/abstract.tex 中
 % 编辑
 
 \mainmatter % 论文主体内容

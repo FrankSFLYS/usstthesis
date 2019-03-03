@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  25 FEB 2019 12:32
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  3 MAR 2019 22:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1669,7 +1669,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \oddsidemargin=13.08827pt
 * \evensidemargin=-1.1381pt
 * \topmargin=-33.0119pt
-* \headheight=12.0pt
+* \headheight=16.0pt
 * \headsep=19.8738pt
 * \topskip=12.0pt
 * \footskip=30.0pt
@@ -1861,9 +1861,9 @@ Underfull \vbox (badness 4096) has occurred while \output is active []
 \openout4 = `demo.toc'.
 
 
-[2] (./chapter/chapter0.tex
+[2] (./chapter/chapter1.tex
 第1章
-) (./chapter/chapter1.tex [1
+) (./chapter/chapter2.tex [1
 
 
 
@@ -1875,7 +1875,7 @@ Underfull \vbox (badness 4096) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3])
-(./chapter/chapter2.tex [4]
+(./chapter/chapter3.tex [4]
 第3章
 \g__fontspec_family_FangSong_int=\count319
 .................................................
@@ -1905,16 +1905,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 . <->"FangSong/OT:script=hani;language=DFLT;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
-[5
 
-] [6]) (./chapter/chapter3.tex [7] [8
+Underfull \vbox (badness 1189) has occurred while \output is active []
+
+ [5
+
+]
+[6]) (./chapter/chapter4.tex [7] [8
 
 ]
 第4章
-[9]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
 File: figure/egf.png Graphic file (type bmp)
 <figure/egf.png>
- [10] (./listing/code.c)
+
+[10] (./listing/code.c)
 
 Package caption Warning: \captionsetup{type*=...} or \captionof
 (caption)                outside box or environment on input line 72.
@@ -1961,12 +1969,15 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
  27895 strings out of 492970
  563476 string characters out of 6137297
- 679364 words of memory out of 5000000
+ 679390 words of memory out of 5000000
  31519 multiletter control sequences out of 15000+600000
  543693 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
