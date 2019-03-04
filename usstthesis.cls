@@ -132,21 +132,25 @@
     font = {wuhao}
 }
 
-\newcommand{\tableCapSet}{ %    调节表格标题和上下文的间距
+\newcommand{\tableCapSet}{  % 调节表格标题和上下文的间距
 \setlength{\abovecaptionskip}{.1cm} %
 \setlength{\belowcaptionskip}{0cm} %
 }
-\newcommand{\figureCapSet}{ %   调节图片标题和上下文的间距
+\newcommand{\figureCapSet}{ % 调节图片标题和上下文的间距
 \setlength{\abovecaptionskip}{.1cm} %
 \setlength{\belowcaptionskip}{.1cm} %
+}
+\newcommand{\codeCapSet}{   % 调节代码环境标题和上下文的间距
+\setlength{\abovecaptionskip}{.4cm} %
+\setlength{\belowcaptionskip}{-.3cm} %
 }
 
 \RequirePackage{listings}   % 代码环境
 \RequirePackage{newfloat}
-\colorlet{codeblue}{blue!15!black}
+\colorlet{codeblue}{blue!25!black}
 \colorlet{codegreen}{green!10!black}
 \colorlet{codegray}{red!50!green!50!blue}
-\colorlet{codemauve}{red!58!blue!60!black}
+\colorlet{codemauve}{red!60!blue!40!black}
 %\RequirePackage[newfloat]{minted}      % \SetupFloatingEnvironment{}{}
 \lstset{ %
 	backgroundcolor=\color{white},   % choose the background color

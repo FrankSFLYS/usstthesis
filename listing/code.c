@@ -1,5 +1,5 @@
 #include <stdio.h>
 
 int main() {
-    printf("Hello, world!");    // 大家好，我是渣渣辉。
+    printf("Hello, world!");    // 在控制台输出 Hello, world!
 }
