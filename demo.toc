@@ -51,5 +51,5 @@
 \contentsline {section}{\numberline {4.12}参考文献}{11}{section.4.12}
 \contentsline {section}{\numberline {4.13}页面}{11}{section.4.13}
 \contentsline {section}{\numberline {4.14}页码}{11}{section.4.14}
-\contentsline {chapter}{参考文献}{13}{section*.7}
+\contentsline {chapter}{参考文献}{13}{chapter*.6}
 \contentsline {chapter}{致\hskip 1em\relax {}谢}{15}{chapter*.8}

@@ -274,11 +274,7 @@
 \input{chapter/abstract.tex}
 
 \cleardoublepage
-%\setcounter{page}{1}
-%\thispagestyle{plain}
 \pagenumbering{roman}
-%\thispagestyle{plain}
-%\afterpage{\thispagestyle{plain}}
 \tocloftpagestyle{plain}
 \tableofcontents
 \thispagestyle{plain}
@@ -288,22 +284,12 @@
 
 \newenvironment{citelist}{%
     \begin{thebibliography}{99}%
-    \phantomsection %
     \addcontentsline{toc}{chapter}{参考文献}%
+    \phantomsection %
     }{%
     \end{thebibliography}%
 }
 
 \newenvironment{code}{\codeCapSet}{}
-
-% \newcommand{\gobbletocpage}{%
-%   \renewcommand{\addcontentsline}[3]{%
-%     \addtocontents{##1}{\protect\renewcommand{\cftXdotsep}{\cftnodots}\protect\contentsline{##2}{##3}{\relax}}}
-% }%
-% \newcommand{\restoretocpage}{%
-%   \renewcommand{\addcontentsline}[3]{%
-%     \addtocontents{##1}{\protect\renewcommand{\cftXdotsep
-%     }{$\ldots$}\protect\contentsline{##2}{##3}{\thepage}}}
-% }%
 
 \endinput
