@@ -2,7 +2,7 @@
 
 [![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()  [![Version](https://img.shields.io/badge/version-2.9-yellow.svg)]()
 
-**作者：[MkSwQi](http://frank.xin) **
+**作者：[MkSwQi](http://frank.xin)**
 
 [![Fork me on Gitee](https://gitee.com/MkSwQi/usstthesis/widgets/widget_6.svg)  ](https://gitee.com/MkSwQi/usstthesis) 
 
