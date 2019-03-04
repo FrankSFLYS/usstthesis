@@ -74,7 +74,6 @@
         format = \bfseries\bSong\zihao{4}
     },
     subsection = {
-        beforeskip = 0.5ex,
         format = \bfseries\bSong\zihao{-4},
         fixskip = true,
         beforeskip = 13pt,
@@ -141,8 +140,8 @@
 \setlength{\belowcaptionskip}{.1cm} %
 }
 \newcommand{\codeCapSet}{   % 调节代码环境标题和上下文的间距
-\setlength{\abovecaptionskip}{.4cm} %
-\setlength{\belowcaptionskip}{-.3cm} %
+\setlength{\abovecaptionskip}{.5cm} %
+\setlength{\belowcaptionskip}{-.1cm} %
 }
 
 \RequirePackage{listings}   % 代码环境
@@ -284,6 +283,8 @@
     }{%
     \end{thebibliography}%
 }
+
+\newenvironment{code}{\codeCapSet}{}
 
 % \newcommand{\gobbletocpage}{%
 %   \renewcommand{\addcontentsline}[3]{%
