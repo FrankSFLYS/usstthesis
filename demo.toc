@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {2.4}摘要}{3}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}摘要正文}{3}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}关键词}{3}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}目录}{4}{section.2.5}
+\contentsline {section}{\numberline {2.5}目录}{3}{section.2.5}
 \contentsline {section}{\numberline {2.6}正文}{4}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}绪论}{4}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}正文主体}{4}{subsection.2.6.2}
@@ -47,7 +47,7 @@
 \contentsline {section}{\numberline {4.8}公式}{10}{section.4.8}
 \contentsline {section}{\numberline {4.9}表格}{10}{section.4.9}
 \contentsline {section}{\numberline {4.10}插图}{10}{section.4.10}
-\contentsline {section}{\numberline {4.11}代码段}{11}{section.4.11}
+\contentsline {section}{\numberline {4.11}代码段}{10}{section.4.11}
 \contentsline {section}{\numberline {4.12}参考文献}{11}{section.4.12}
 \contentsline {section}{\numberline {4.13}页面}{11}{section.4.13}
 \contentsline {section}{\numberline {4.14}页码}{11}{section.4.14}

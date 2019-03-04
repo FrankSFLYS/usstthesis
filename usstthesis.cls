@@ -8,7 +8,7 @@
 %% c = 299792458 m/s
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{usstthesis}
-    [2019/01/01 v2 USST Thesis class]
+    [2019/01/01 v2.9 USST Thesis class]
 \typeout{USST Thesis}
 
 \LoadClass[twoside, zihao=-4, openright]{ctexbook} % Based on ctexart, twosided
@@ -61,20 +61,24 @@
     contentsname = 目\quad 录,
     chapter = {
         number = \arabic{chapter},
-        format = {\bfseries\bZhongsong\centering\zihao{3}},
+        format = {\bZhongsong\centering\zihao{3}},
+        numberformat += \bfseries,
         pagestyle = fancy,
         fixskip = true,
         beforeskip = 49pt,
         afterskip = 35pt
     },
     section = {
-        fixskip = true,
-        beforeskip = 3.8ex,
-        afterskip = 3ex,
-        format = \bfseries\bSong\zihao{4}
+        format = {\bSong\zihao{4}},
+        numberformat += \bfseries,
+        aftername = \hspace{0.5em} ,
+        beforeskip = 9pt,
+        afterskip = 6pt,
     },
     subsection = {
-        format = \bfseries\bSong\zihao{-4},
+        format = {\bSong\zihao{-4}},
+        numberformat += \bfseries,
+        aftername = \hspace{0.5em} ,
         fixskip = true,
         beforeskip = 13pt,
         afterskip = 9pt,
@@ -85,8 +89,14 @@
 %\renewcommand{\cftdot}{$\ldots$}    % 使用密集的小点
 \renewcommand{\cfttoctitlefont}{\hfill\bZhongsong\zihao{3}}
 \renewcommand{\cftaftertoctitle}{\hfill}
-\renewcommand{\cftdotsep}{1.5}      % 点间距
-\setlength{\cftbeforechapskip}{8pt}
+\renewcommand{\cftdotsep}{0.1}      % 点间距
+\setlength{\cftbeforechapskip}{6pt}
+\setlength{\cftbeforesecskip}{0pt}
+\setlength{\cftbeforesubsecskip}{0pt}
+\setlength{\cftsecindent}{1em}
+\setlength{\cftsubsecindent}{2em}
+\setlength{\cftsecnumwidth}{1em}
+\setlength{\cftsubsecnumwidth}{2em}
 \renewcommand{\cftchapfont}{\bfseries\bSong\zihao{-4}}
 \renewcommand{\cftsecfont}{\zihao{-4}}
 \renewcommand{\cftsubsecfont}{\zihao{-4}}

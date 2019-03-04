@@ -1,6 +1,6 @@
 # 上海理工大学本科毕业设计(论文) LaTeX 文档类
 
-[![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()  [![Version](https://img.shields.io/badge/version-2-yellow.svg)]()
+[![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()  [![Version](https://img.shields.io/badge/version-2.9-yellow.svg)]()
 
 **作者：[MkSwQi](http://frank.xin)**
 
@@ -17,7 +17,7 @@
 1. 目录中，摘要和 ABSTRACT 在学校给出的 Word 模板中没有导向点和页码；
 2. 本文档类中所使用的华文中宋粗体、宋体粗体要比 Word 模板中的更粗；
 3. 由于直接使用了加粗的字体文件，编译时可能出现很多字体的警告，这是由于本文档类的缺陷造成的，暂时无法解决，编译时请注意甄别；
-4. 一个 BUG：最后一段为不超过一行的段落时，可能会与前文有过多空行（例如第 3 页，2.4 节）；
+4. 因为调整间距时的未知问题，导致 section 无法与模板完全一致；
 
 ### 更多
 
