@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  4 MAR 2019 20:33
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  4 MAR 2019 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1917,7 +1917,7 @@ File: figure/egf.png Graphic file (type bmp)
  [10] (./listing/code.c)
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 74.
+(caption)                particular \caption on input line 75.
 See the caption package documentation for explanation.
 
 ) [11] [12
@@ -1959,10 +1959,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
- 27883 strings out of 492970
- 562378 string characters out of 6137297
- 677460 words of memory out of 5000000
- 31508 multiletter control sequences out of 15000+600000
+ 27887 strings out of 492970
+ 562412 string characters out of 6137297
+ 677443 words of memory out of 5000000
+ 31512 multiletter control sequences out of 15000+600000
  543693 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,15n,94p,10407b,1109s stack positions out of 5000i,500n,10000p,200000b,80000s

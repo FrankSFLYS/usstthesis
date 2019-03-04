@@ -25,13 +25,14 @@
 \par 个别名词或情况需要解释时，可加注说明，注释可用页末注（注文放在加注页的下端）或篇末注（全部注文集中在正文末尾），而不可用行中注（注文夹在正文中间）。
 
 \section{公式}
-\par 公式居中书写，建议使用 \verb|equation| 等公式环境，公式较长时应在“$=$”前转行或在“$+$、$-$、$\times$、$\div$”等运算符号处转行，等号或运算符号应在转行后的行首。公式的编号用圆括号括起来放在公式右边行末，公式和编号之间留空。微分算子可使用 \verb|usstthesis| 文档类定义的 \verb|\dif|。例：
+\par 公式居中书写，建议使用 \verb|equation| 等公式环境，公式较长时应在“$=$”前转行或在“$+$、$-$、$\times$、$\div$”等运算符号处转行，等号或运算符号应在转行后的行首。公式的编号用圆括号括起来放在公式右边行末，公式和编号之间留空。微分算子可使用 \verb|usstthesis| 文档类定义的 \verb|\dif|。例\autoref{equation:1}。
 \begin{equation}
+    \label{equation:1}
     F(j\omega)=\int_{-\infty}^{\infty}f(t)e^{-j\omega t}\dif t
 \end{equation}
 
 \section{表格}
-\par 每个表格应有表序和表题，表序和表题应在表格的上方，居中，使用表格环境的 \verb|\caption| 书写，便于添加引用，表格整体置于 \verb|table| 环境中。一般情况下表格采用五号宋体。例表 \ref{table:tsp calc}：
+\par 每个表格应有表序和表题，表序和表题应在表格的上方，居中，使用表格环境的 \verb|\caption| 书写，便于添加引用，表格整体置于 \verb|table| 环境中。一般情况下表格采用五号宋体。例\autoref{table:tsp calc}：
 \begin{table}[htb]
     \tableCapSet    % 使用此命令调整 caption 间距
     \caption{TSP 问题的计算量（计算速度：$10^8/$s）}
@@ -54,7 +55,7 @@
 \end{table}
 
 \section{插图}
-\par 每幅插图应有图序和图题，图序和图题放在图下方居中处，建议使用 \verb|figure| 环境，并且使用 \verb|\includegraphics| 插图。一般情况下插图采用五号宋体。例图 \ref{figure:model}：
+\par 每幅插图应有图序和图题，图序和图题放在图下方居中处，建议使用 \verb|figure| 环境，并且使用 \verb|\includegraphics| 插图。一般情况下插图采用五号宋体。例\autoref{figure:model}：
 
 \begin{figure}[htb]
     \figureCapSet
@@ -65,11 +66,11 @@
 \end{figure}
 
 \section{代码段}
-\par 本文档类提供了两种插入代码的方式，其中第一种是使用代码文件插入，使用方法为：\lstinline|\lstinputlisting[caption=xxx]{listing/xxx.c}|。效果如清单 \ref{code:code.c} 所示。
+\par 本文档类提供了两种插入代码的方式，其中第一种是使用代码文件插入，使用方法为：\lstinline|\lstinputlisting[caption=xxx]{listing/xxx.c}|。效果如\autoref{code:code.c} 所示。
 \codeCapSet
 \lstinputlisting[caption=code.c, label=code:code.c]{listing/code.c}
 
-\par 第二种方法是直接在正文当中编辑，使用 \lstinline|code| 和 \lstinline|lstlisting| 环境，使用 \lstinline|captionof{lstlisting}{xxx}| 标记标题。如清单 \ref{code:main.h} 所示。
+\par 第二种方法是直接在正文当中编辑，使用 \lstinline|code| 和 \lstinline|lstlisting| 环境，使用 \lstinline|captionof{lstlisting}{xxx}| 标记标题。如\autoref{code:main.h} 所示。
 \begin{code}
 \captionof{lstlisting}{main.h}
 \label{code:main.h}

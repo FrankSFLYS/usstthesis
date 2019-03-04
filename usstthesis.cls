@@ -191,6 +191,24 @@
     linkcolor=darkred,
     citecolor=darkred]{hyperref}
 
+\def\equationautorefname{式}
+\def\footnoteautorefname{注}
+\def\itemautorefname{项}
+\def\figureautorefname{图}
+\def\tableautorefname{表}
+\def\partautorefname{篇}
+\def\appendixautorefname{附录}
+\def\chapterautorefname{章}
+\def\sectionautorefname{节}
+\def\subsectionautorefname{小小节}
+\def\paragraphautorefname{段落}
+\def\subparagraphautorefname{子段落}
+\def\FancyVerbLineautorefname{行}
+\def\theoremautorefname{定理}
+\newcommand*{\chapref}[1]{\hyperref[{#1}]{第 \ref*{#1} 章}}
+\newcommand*{\secref}[1]{\hyperref[{#1}]{第 \ref*{#1} 节}}
+\newcommand*{\subsecref}[1]{\hyperref[{#1}]{第 \ref*{#1} 小节}}
+
 \newcommand{\abstractcn}{
     \cleardoublepage %
     %\gobbletocpage %
