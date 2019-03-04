@@ -170,13 +170,15 @@
 ​        为了方便编译和视觉效果的统一，文档使用 `listings` 宏包插入代码。可以在导言区设置使用的语言，例如使用 C 语言：`\lstset{language=C}`，使用时也可以进行设置，具体用法请参考 `listings` 宏包文档 [listings.pdf](http://mirrors.ctan.org/macros/latex/contrib/listings/listings.pdf)。其基本使用方法如下：
 1. 行内代码，使用 `\lstinline|内容|`（注意在命令的插入空格，否则在中文环境中它会和文字连在一起），使用方法和 `\verbatim|内容|` 类似，两个竖线作为和普通文本的分界符，可以替换为其他字符，但是前后一定要相同，例如可以替换为 `\lstinline[内容[`；
 
-2. 代码段，直接在文中插入时，使用 `lstlisting` 环境，并且在环境外面使用 `\captionof{lstlisting}{标题内容}`，例如：
+2. 代码段，直接在文中插入时，使用 `code` 环境和 `lstlisting` 环境（`code` 环境可以避免 `lstlisting` 环境不闭合，而导致后面段落无首行缩进的问题），并且使用 `\captionof{lstlisting}{标题内容}` 插入标题，例如：
 
    ```latex
+   \begin{code}
    \captionof{lstlisting}{main.h}
    \begin{lstlisting}
    int main(int argc, char* argv[]);
    \end{lstlisting}
+   \end{code}
    ```
 
    会生成如下图所示的文档。
