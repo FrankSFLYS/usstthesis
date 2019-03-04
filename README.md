@@ -2,7 +2,9 @@
 
 [![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()  [![Version](https://img.shields.io/badge/version-2.9-yellow.svg)]()
 
-**作者：[MkSwQi](http://frank.xin)**
+**作者：[MkSwQi](http://frank.xin) **
+
+[![Fork me on Gitee](https://gitee.com/MkSwQi/usstthesis/widgets/widget_6.svg)  ](https://gitee.com/MkSwQi/usstthesis) 
 
 ## 注意事项
 
@@ -26,7 +28,6 @@
 ​        包附带的三种字体使用方法分别为：华文中宋加粗：`{\bZhongsong 华文中宋粗体}`，华文中宋正体：`{\Zhongsong 华文中宋}`，宋体加粗：`{\bSong 宋体粗体}`，楷体加粗：`{\bKai 楷体粗体}`。**注意：** 如果要加粗的字体中同时有中英文，还需要再加上 `\bfseries`，此时编译会报字体警告，可以忽略。
 
 ​        使用过程中有任何问题或者建议，欢迎在 Gitee 上提交 issue 或 Pull Request。
-[![Fork me on Gitee](https://gitee.com/MkSwQi/usstthesis/widgets/widget_6.svg)](https://gitee.com/MkSwQi/usstthesis)
 
 ## 使用方法
 
