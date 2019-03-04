@@ -65,13 +65,14 @@
 \end{figure}
 
 \section{代码段}
-\par 本文档类提供了两种插入代码的方式，其中第一种是使用代码文件插入，使用方法为：\lstinline|\lstinputlisting[caption=xxx]{listing/xxx.c}|。
+\par 本文档类提供了两种插入代码的方式，其中第一种是使用代码文件插入，使用方法为：\lstinline|\lstinputlisting[caption=xxx]{listing/xxx.c}|。效果如清单 \ref{code:code.c} 所示。
 \codeCapSet
-\lstinputlisting[caption=code.c]{listing/code.c}
+\lstinputlisting[caption=code.c, label=code:code.c]{listing/code.c}
 
-\par 第二种方法是直接在正文当中编辑，使用\lstinline|code| 和 \lstinline|lstlisting| 环境，使用 \lstinline|captionof{lstlisting}{xxx}| 标记标题。
+\par 第二种方法是直接在正文当中编辑，使用 \lstinline|code| 和 \lstinline|lstlisting| 环境，使用 \lstinline|captionof{lstlisting}{xxx}| 标记标题。如清单 \ref{code:main.h} 所示。
 \begin{code}
 \captionof{lstlisting}{main.h}
+\label{code:main.h}
 \begin{lstlisting}
 int main(int argc, char* argv[]);
 \end{lstlisting}
