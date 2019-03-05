@@ -209,6 +209,30 @@
 \providecommand*{\secref}[1]{\hyperref[{#1}]{第 \ref*{#1} 节}}
 \providecommand*{\subsecref}[1]{\hyperref[{#1}]{第 \ref*{#1} 小节}}
 
+\RequirePackage{enumitem}
+\setlist[enumerate,itemize,description]{noitemsep}
+\setlist[enumerate,itemize,description,2]{leftmargin=10pt,nosep}
+
+\renewcommand{\labelenumi}{(\theenumi)}
+\renewcommand{\theenumii}{\arabic{enumii}}
+\renewcommand{\labelenumii}{\theenumii)}
+
+\newenvironment{citelist}{% 参考文献
+    \begin{thebibliography}{99}%
+    \addcontentsline{toc}{chapter}{参考文献}%
+    \phantomsection %
+    }{%
+    \end{thebibliography}%
+}
+
+\newenvironment{code}{\codeCapSet}{}
+
+\RequirePackage[absolute]{textpos}  % textblock
+\RequirePackage{setspace}   % parbox
+\RequirePackage{array}      % tabular
+\RequirePackage{etoolbox}   % \patchcmd{}{}{}
+\RequirePackage{afterpage}  % \afterpage
+
 \providecommand{\abstractcn}{
     \cleardoublepage %
     %\gobbletocpage %
@@ -231,13 +255,6 @@
     \afterpage{\thispagestyle{empty}}
     \\\\\noindent{\bfseries KEY WORDS: }
 }
-
-\RequirePackage[absolute]{textpos}  % textblock
-\RequirePackage{setspace}   % parbox
-\RequirePackage{array}      % tabular
-\RequirePackage{etoolbox}   % \patchcmd{}{}{}
-\RequirePackage{afterpage}  % \afterpage
-
 \providecommand{\outputfrontmatter}{
 \setlength{\TPHorizModule}{1cm}  % textblock horiz length reference
 \setlength{\TPVertModule}{1cm}   % textblock verti length reference
@@ -299,15 +316,5 @@
 \afterpage{\thispagestyle{plain}}
 \cleardoublepage
 }
-
-\newenvironment{citelist}{%
-    \begin{thebibliography}{99}%
-    \addcontentsline{toc}{chapter}{参考文献}%
-    \phantomsection %
-    }{%
-    \end{thebibliography}%
-}
-
-\newenvironment{code}{\codeCapSet}{}
 
 \endinput

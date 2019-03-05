@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  5 MAR 2019 15:58
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  5 MAR 2019 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1517,6 +1517,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip110
 )
+(c:/texlive/2018/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip111
+\enit@outerparindent=\dimen285
+\enit@toks=\toks28
+\enit@inbox=\box58
+\enitdp@description=\count311
+)
 (c:/texlive/2018/texmf-dist/tex/latex/textpos/textpos.sty
 Package: textpos 2016/06/07 v1.8
 
@@ -1524,32 +1532,32 @@ Package: textpos 2016/06/07 1.8, absolute positioning of text on the page
 (c:/texlive/2018/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
-\TP@textbox=\box58
-\TP@holdbox=\box59
-\TPHorizModule=\dimen285
-\TPVertModule=\dimen286
-\TP@margin=\dimen287
-\TP@absmargin=\dimen288
+\TP@textbox=\box59
+\TP@holdbox=\box60
+\TPHorizModule=\dimen286
+\TPVertModule=\dimen287
+\TP@margin=\dimen288
+\TP@absmargin=\dimen289
 
 Grid set 16 x 16 = 37.34424pt x 52.81541pt
-\TPboxrulesize=\dimen289
-\TP@ox=\dimen290
-\TP@oy=\dimen291
-\TP@tbargs=\toks28
-\TP@prevdepth=\dimen292
+\TPboxrulesize=\dimen290
+\TP@ox=\dimen291
+\TP@oy=\dimen292
+\TP@tbargs=\toks29
+\TP@prevdepth=\dimen293
 TextBlockOrigin set to 0pt x 0pt
 ) (c:/texlive/2018/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (c:/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count311
+\etb@tempcnta=\count312
 )
 (c:/texlive/2018/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
-\AP@output=\toks29
-\AP@partial=\box60
-\AP@footins=\box61
+\AP@output=\toks30
+\AP@partial=\box61
+\AP@footins=\box62
 ))
 (c:/texlive/2018/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1559,8 +1567,8 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 (c:/texlive/2018/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2018/04/07 v3.7.0 xeCJK patch file for listings
-\l__xeCJK_listings_max_char_int=\count312
-\l__xeCJK_listings_flag_int=\count313
+\l__xeCJK_listings_max_char_int=\count313
+\l__xeCJK_listings_flag_int=\count314
 ) (./demo.aux)
 \openout1 = `demo.aux'.
 
@@ -1690,8 +1698,8 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count314
-\AtBeginShipoutBox=\box62
+\c@lstlisting=\count315
+\AtBeginShipoutBox=\box63
 Package hyperref Info: Link coloring ON on input line 19.
 (c:/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1699,7 +1707,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count315
+\c@section@level=\count316
 )
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
@@ -1729,7 +1737,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--20
 . <->"[STKaiB.ttf]/OT:script=hani;language=DFLT;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
-\g__fontspec_family_STZhongsongB.ttf_int=\count316
+\g__fontspec_family_STZhongsongB.ttf_int=\count317
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1767,7 +1775,7 @@ LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <15.05624> not available
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.53937> not available
 (Font)              size <10.95> substituted on input line 20.
 
-\g__fontspec_family_STZhongsong_int=\count317
+\g__fontspec_family_STZhongsong_int=\count318
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -1818,7 +1826,7 @@ Package newfloat Info: Setting Plan B file extension to `lof'... on input line
 * 
 * Font 'SCSongB' does not contain script 'CJK'.
 *************************************************
-\g__fontspec_family_SCSongB.ttf_int=\count318
+\g__fontspec_family_SCSongB.ttf_int=\count319
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1873,7 +1881,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 第2章
 [3]) (./chapter/chapter3.tex [4]
 第3章
-\g__fontspec_family_FangSong_int=\count319
+\g__fontspec_family_FangSong_int=\count320
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -1917,7 +1925,7 @@ File: figure/egf.png Graphic file (type bmp)
  [10] (./listing/code.c)
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 75.
+(caption)                particular \caption on input line 87.
 See the caption package documentation for explanation.
 
 ) [11] [12
@@ -1959,10 +1967,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
- 27887 strings out of 492970
- 562412 string characters out of 6137297
- 677443 words of memory out of 5000000
- 31512 multiletter control sequences out of 15000+600000
+ 28167 strings out of 492970
+ 567118 string characters out of 6137297
+ 683893 words of memory out of 5000000
+ 31787 multiletter control sequences out of 15000+600000
  543693 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,15n,94p,10407b,1109s stack positions out of 5000i,500n,10000p,200000b,80000s
