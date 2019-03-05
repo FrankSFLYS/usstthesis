@@ -44,7 +44,7 @@
     date=2019年1月1日   % 完成日期
 }
 
-\newcommand{\usstthesisset}[1]{\setkeys{usstthesis}{#1}}
+\providecommand{\usstthesisset}[1]{\setkeys{usstthesis}{#1}}
 
 \newCJKfontfamily\Zhongsong{STZhongsong}    % 华文中宋
 \newCJKfontfamily\bSong{SCSongB.ttf}    % 宋体粗体
@@ -129,7 +129,7 @@
 \RequirePackage{amsmath}    % \numberwithin{}{}
 \numberwithin{equation}{chapter}    % 公式编号以 *.* 为格式
 \numberwithin{table}{chapter}
-\newcommand*{\dif}{\mathop{}\!\mathrm{d}}   % 微分算子 d
+\providecommand*{\dif}{\mathop{}\!\mathrm{d}}   % 微分算子 d
 
 \RequirePackage{tabularx}
 \RequirePackage{booktabs}   % 三线表 \toprule \midrule \bottomrule
@@ -141,15 +141,15 @@
     font = {wuhao}
 }
 
-\newcommand{\tableCapSet}{  % 调节表格标题和上下文的间距
+\providecommand{\tableCapSet}{  % 调节表格标题和上下文的间距
 \setlength{\abovecaptionskip}{.1cm} %
 \setlength{\belowcaptionskip}{0cm} %
 }
-\newcommand{\figureCapSet}{ % 调节图片标题和上下文的间距
+\providecommand{\figureCapSet}{ % 调节图片标题和上下文的间距
 \setlength{\abovecaptionskip}{.1cm} %
 \setlength{\belowcaptionskip}{.1cm} %
 }
-\newcommand{\codeCapSet}{   % 调节代码环境标题和上下文的间距
+\providecommand{\codeCapSet}{   % 调节代码环境标题和上下文的间距
 \setlength{\abovecaptionskip}{.5cm} %
 \setlength{\belowcaptionskip}{-.1cm} %
 }
@@ -205,29 +205,29 @@
 \def\subparagraphautorefname{子段落}
 \def\FancyVerbLineautorefname{行}
 \def\theoremautorefname{定理}
-\newcommand*{\chapref}[1]{\hyperref[{#1}]{第 \ref*{#1} 章}}
-\newcommand*{\secref}[1]{\hyperref[{#1}]{第 \ref*{#1} 节}}
-\newcommand*{\subsecref}[1]{\hyperref[{#1}]{第 \ref*{#1} 小节}}
+\providecommand*{\chapref}[1]{\hyperref[{#1}]{第 \ref*{#1} 章}}
+\providecommand*{\secref}[1]{\hyperref[{#1}]{第 \ref*{#1} 节}}
+\providecommand*{\subsecref}[1]{\hyperref[{#1}]{第 \ref*{#1} 小节}}
 
-\newcommand{\abstractcn}{
+\providecommand{\abstractcn}{
     \cleardoublepage %
     %\gobbletocpage %
     \chapter{摘\quad{}要} %
     \thispagestyle{empty} %
     %\restoretocpage %
 }
-\newcommand{\keywordscn}{
+\providecommand{\keywordscn}{
     \afterpage{\thispagestyle{empty}}
     \\\\\noindent{\bSong 关键词：}
 }
-\newcommand{\abstracten}{
+\providecommand{\abstracten}{
     \cleardoublepage %
     %\gobbletocpage %
     \chapter{ABSTRACT} %
     \thispagestyle{empty} %
     %\restoretocpage %
 }
-\newcommand{\keywordsen}{
+\providecommand{\keywordsen}{
     \afterpage{\thispagestyle{empty}}
     \\\\\noindent{\bfseries KEY WORDS: }
 }
@@ -238,7 +238,7 @@
 \RequirePackage{etoolbox}   % \patchcmd{}{}{}
 \RequirePackage{afterpage}  % \afterpage
 
-\newcommand{\outputfrontmatter}{
+\providecommand{\outputfrontmatter}{
 \setlength{\TPHorizModule}{1cm}  % textblock horiz length reference
 \setlength{\TPVertModule}{1cm}   % textblock verti length reference
 \frontmatter
