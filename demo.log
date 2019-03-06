@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  6 MAR 2019 17:34
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  6 MAR 2019 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1876,25 +1876,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  (./chapter/chapter1.tex
 第1章
-) [1
-
-
-
-
-]
-\openout2 = `chapter/chapter2.aux'.
-
- (./chapter/chapter2.tex [2
-
-
-
-]
-第2章
-[3]) [4]
-\openout2 = `chapter/chapter3.aux'.
-
- (./chapter/chapter3.tex
-第3章
 \g__fontspec_family_FangSong_int=\count320
 .................................................
 . fontspec info: "no-font-shape"
@@ -1923,6 +1904,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 . <->"FangSong/OT:script=hani;language=DFLT;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
+) [1
+
+
+
+
+]
+\openout2 = `chapter/chapter2.aux'.
+
+ (./chapter/chapter2.tex [2
+
+
+
+]
+第2章
+[3]) [4]
+\openout2 = `chapter/chapter3.aux'.
+
+ (./chapter/chapter3.tex
+第3章
 
 Underfull \vbox (badness 1406) has occurred while \output is active []
 
@@ -1986,15 +1986,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
 (./chapter/thanking.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 36.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
+Package rerunfilecheck Info: File `demo.out' has not changed.
+(rerunfilecheck)             Checksum: E4B758BC56C941C442EA0C45DAE9CA46.
 
-
-Package rerunfilecheck Warning: File `demo.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `demo.out':
-(rerunfilecheck)             Before: 5EEE75F203C5CA5E9679F6D569E33343
-(rerunfilecheck)             After:  E4B758BC56C941C442EA0C45DAE9CA46.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.34248pt have occurred.
@@ -2005,12 +1999,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
- 28197 strings out of 492970
- 567737 string characters out of 6137297
- 683932 words of memory out of 5000000
- 31793 multiletter control sequences out of 15000+600000
+ 28214 strings out of 492970
+ 567948 string characters out of 6137297
+ 684988 words of memory out of 5000000
+ 31810 multiletter control sequences out of 15000+600000
  543693 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,15n,94p,10407b,1109s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,15n,94p,10407b,1100s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on demo.pdf (25 pages).

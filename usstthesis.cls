@@ -160,10 +160,16 @@
 \colorlet{codegreen}{green!10!black}
 \colorlet{codegray}{red!50!green!50!blue}
 \colorlet{codemauve}{red!60!blue!40!black}
-%\RequirePackage[newfloat]{minted}      % \SetupFloatingEnvironment{}{}
+% \makeatletter
+\lstdefinestyle{mystyle}{
+  basicstyle=%
+    \ttfamily%
+    \lst@ifdisplaystyle\scriptsize\fi
+}
+% \makeatother
 \lstset{ %
 	backgroundcolor=\color{white},   % choose the background color
-	basicstyle=\footnotesize\ttfamily,        % size of fonts used for the code
+	style=mystyle,        % size of fonts used for the code
 	columns=fullflexible,
 	breaklines=true,                 % automatic line breaking only at 
 	%whitespace
