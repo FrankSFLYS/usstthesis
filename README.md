@@ -44,12 +44,12 @@
 ​        文档类提供了一些额外的宏和命令，可以有助于文档的写作，它们有：
 
 ```latex
-\autoref{ref} % 汉化了 autoref 的文字，常用的形如"表 \ref{table:xx}"可以直接使用"\autoref{table:xx}"代替
-\chapref{ref} % 章引用，引用章时代替 \autoref，可以生成形如"第 2 章"的文字。
-\secref{ref} \subsecref{ref} % 使用方法类似 \chapref
-\dif          % 公式环境中使用，用于生成微分算子 d
-\tableCapSet \figureCapSet \codeCapSet % 用于调节表格、图、代码标题和其内容的距离，其中 \codeCapSet 已嵌入 code 环境，无需显式使用
-\includefrontmatter % 输出文档前序固定内容，下文有具体介绍
+\autoref{ref} - 汉化了 autoref 的文字，常用的形如"表 \ref{table:xx}"可以直接使用"\autoref{table:xx}"代替
+\chapref{ref} - 章引用，引用章时代替 \autoref，可以生成形如"第 2 章"的文字。
+\secref{ref} \subsecref{ref} - 分别对应 section 和 subsection，使用方法类似于 \chapref
+\dif          - 公式环境中使用，用于生成微分算子 d
+\tableCapSet \figureCapSet \codeCapSet - 用于调节表格、图、代码标题和其内容的距离，其中 \codeCapSet 已嵌入 code 环境，无需显式使用
+\includefrontmatter - 输出文档前序固定内容，下文有具体介绍
 ```
 
 ## 文档结构
@@ -182,7 +182,7 @@
 ### 代码
 
 ​        为了方便编译和视觉效果的统一，文档使用 `listings` 宏包插入代码。可以在导言区设置使用的语言，例如使用 C 语言：`\lstset{language=C}`，使用时也可以进行设置，具体用法请参考 `listings` 宏包文档 [listings.pdf](http://mirrors.ctan.org/macros/latex/contrib/listings/listings.pdf)。其基本使用方法如下：
-1. 行内代码，使用 `\lstinline|内容|`（注意在命令的插入空格，否则在中文环境中它会和文字连在一起），使用方法和 `\verbatim|内容|` 类似，两个竖线作为和普通文本的分界符，可以替换为其他字符，但是前后一定要相同，例如可以替换为 `\lstinline[内容[`；
+1. 行内代码，使用 `\lstinline|内容|`（注意在命令的前后插入空格，否则在中文环境中它会和文字连在一起），使用方法和 `\verbatim|内容|` 类似，两个竖线作为和普通文本的分界符，可以替换为其他字符，但是前后一定要相同，例如可以替换为 `\lstinline[内容[`；
 
 2. 代码段，直接在文中插入时，使用 `code` 环境和 `lstlisting` 环境（`code` 环境可以避免 `lstlisting` 环境不闭合，而导致后面段落无首行缩进的问题），并且使用 `\captionof{lstlisting}{标题内容}` 插入标题，例如：
 
