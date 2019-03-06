@@ -192,10 +192,11 @@
     citecolor=darkred]{hyperref}
 
 \newcommand{\abstractcn}{
-    \cleardoublepage %
+    \cleardoublepage
     %\gobbletocpage %
-    \chapter{摘\quad{}要} %
-    \thispagestyle{empty} %
+    \addtocontents{toc}{\cftpagenumbersoff{chapter}}
+    \chapter{摘\quad{}要}
+    \thispagestyle{empty}
     %\restoretocpage %
 }
 \newcommand{\keywordscn}{
@@ -203,10 +204,11 @@
     \\\\\noindent{\bSong 关键词：}
 }
 \newcommand{\abstracten}{
-    \cleardoublepage %
+    \cleardoublepage 
     %\gobbletocpage %
-    \chapter{ABSTRACT} %
-    \thispagestyle{empty} %
+    \chapter{ABSTRACT} 
+    \thispagestyle{empty} 
+    \addtocontents{toc}{\cftpagenumberson{chapter}}
     %\restoretocpage %
 }
 \newcommand{\keywordsen}{

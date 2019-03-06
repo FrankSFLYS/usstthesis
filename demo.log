@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  4 MAR 2019 19:35
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  6 MAR 2019 13:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1851,7 +1851,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--20
 ] (./demo.toc
 
 LaTeX Font Warning: Font shape `TU/SCSongB.ttf(0)/bx/n' undefined
-(Font)              using `TU/SCSongB.ttf(0)/m/n' instead on input line 1.
+(Font)              using `TU/SCSongB.ttf(0)/m/n' instead on input line 2.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1961,7 +1961,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
 Here is how much of TeX's memory you used:
  27881 strings out of 492970
  562352 string characters out of 6137297
- 677460 words of memory out of 5000000
+ 677498 words of memory out of 5000000
  31506 multiletter control sequences out of 15000+600000
  543693 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
