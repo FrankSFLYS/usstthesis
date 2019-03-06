@@ -234,10 +234,11 @@
 \RequirePackage{afterpage}  % \afterpage
 
 \providecommand{\abstractcn}{
-    \cleardoublepage %
+    \cleardoublepage
     %\gobbletocpage %
-    \chapter{摘\quad{}要} %
-    \thispagestyle{empty} %
+    \addtocontents{toc}{\cftpagenumbersoff{chapter}}
+    \chapter{摘\quad{}要}
+    \thispagestyle{empty}
     %\restoretocpage %
 }
 \providecommand{\keywordscn}{
@@ -245,10 +246,11 @@
     \\\\\noindent{\bSong 关键词：}
 }
 \providecommand{\abstracten}{
-    \cleardoublepage %
+    \cleardoublepage 
     %\gobbletocpage %
-    \chapter{ABSTRACT} %
-    \thispagestyle{empty} %
+    \chapter{ABSTRACT} 
+    \thispagestyle{empty} 
+    \addtocontents{toc}{\cftpagenumberson{chapter}}
     %\restoretocpage %
 }
 \providecommand{\keywordsen}{

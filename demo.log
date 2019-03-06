@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  6 MAR 2019 09:53
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  6 MAR 2019 13:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1569,7 +1569,9 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 Package: xeCJK-listings 2018/04/07 v3.7.0 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count313
 \l__xeCJK_listings_flag_int=\count314
-) (./demo.aux)
+) (./demo.aux
+(./chapter/chapter1.aux) (./chapter/chapter2.aux) (./chapter/chapter3.aux)
+(./chapter/chapter4.aux) (./chapter/citation.aux) (./chapter/thanking.aux))
 \openout1 = `demo.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -1859,7 +1861,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--20
 ] (./demo.toc
 
 LaTeX Font Warning: Font shape `TU/SCSongB.ttf(0)/bx/n' undefined
-(Font)              using `TU/SCSongB.ttf(0)/m/n' instead on input line 1.
+(Font)              using `TU/SCSongB.ttf(0)/m/n' instead on input line 2.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1984,9 +1986,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
 (./chapter/thanking.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 36.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
-Package rerunfilecheck Info: File `demo.out' has not changed.
-(rerunfilecheck)             Checksum: E4B758BC56C941C442EA0C45DAE9CA46.
 
+
+Package rerunfilecheck Warning: File `demo.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `demo.out':
+(rerunfilecheck)             Before: 5EEE75F203C5CA5E9679F6D569E33343
+(rerunfilecheck)             After:  E4B758BC56C941C442EA0C45DAE9CA46.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.34248pt have occurred.
@@ -1997,10 +2005,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
- 28179 strings out of 492970
- 567371 string characters out of 6137297
- 683893 words of memory out of 5000000
- 31787 multiletter control sequences out of 15000+600000
+ 28197 strings out of 492970
+ 567737 string characters out of 6137297
+ 683931 words of memory out of 5000000
+ 31793 multiletter control sequences out of 15000+600000
  543693 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,15n,94p,10407b,1109s stack positions out of 5000i,500n,10000p,200000b,80000s
