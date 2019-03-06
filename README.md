@@ -50,7 +50,7 @@
 \secref{ref} \subsecref{ref} % 使用方法类似 \chapref
 \dif          % 公式环境中使用，用于生成微分算子 d
 \tableCapSet \figureCapSet \codeCapSet % 用于调节表格、图、代码标题和其内容的距离，其中 \codeCapSet 已嵌入 code 环境，无需显式使用
-\outputfrontmatter % 输出文档前序固定内容，下文有具体介绍
+\includefrontmatter % 输出文档前序固定内容，下文有具体介绍
 ```
 
 ## 文档结构
@@ -67,7 +67,7 @@
 8. 致谢
 9. 附录
 
-​        更详细的格式要求参见 demo.pdf。使用时，1~5 部分使用 `\outputfrontmatter` 命令可以直接输出，无需另外编辑，后续内容像书写普通 LaTeX 文档一样，例如，一个完整的、包括各个内容的 demo 如下所示：
+​        更详细的格式要求参见 demo.pdf。使用时，1~5 部分使用 `\includefrontmatter` 命令可以直接输出，无需另外编辑，后续内容像书写普通 LaTeX 文档一样，例如，一个完整的、包括各个内容的 demo 如下所示：
 
 ```latex
 \documentclass{usstthesis}	% 使用 usstthesis 文档类
@@ -85,7 +85,7 @@
 }
 
 \begin{document} % 开始文档
-\outputfrontmatter % 输出 1~5 的内容
+\includefrontmatter % 输出 1~5 的内容
 % 注意，摘要和 ABSTRACT 的内容请在 ./chapter/abstract.tex 中
 % 编辑
 
@@ -99,7 +99,7 @@
     \bibitem{机器学习}刘琴.机器学习[J].武汉工程职业技术学院学报,2001,13(2):41-44.
 \end{citelist}
 
-\input{chapter/thanking.tex} % 致谢
+\include{chapter/thanking} % 致谢
 
 \end{document} % 文档结束
 ```
@@ -120,16 +120,17 @@
 \keywordsen Keywords 1\quad{}Keywords 2\quad{}Keywords 3
 ```
 
-​        同时也建议，在文档主体中不直接写内容，而是使用 `\input{<filename>}`命令，将文档按照章节分开每个文件，例如：
+​        同时也建议，在文档主体中不直接写内容，而是使用 `\include{<filename>}`命令（注意，不需要添加文件后缀 `.tex`），将文档按照章节分开每个文件，如果以后有不需要输出某些章的需求，可以在导言区使用 `\includeonly{<file1>,<file2>}` 使其只编译 file1 和 file2。例如：
 
 ``` latex
-\input{chapter/chap1.tex}
-\input{chapter/chap2.tex}
+\include{chapter/chap1}
+\include{chapter/chap2}
 ```
 
 ​        其中，`chap*.tex` 中不应该包含 `\begin{document} ` 和 `\end{document}`，而应该直接写正文内容，例如：
 
 ```latex
+% chapter/chap1.tex
 \section{chap1}
 \subsection{chap1-section1}
 \par Paragraph.

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  5 MAR 2019 18:40
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  6 MAR 2019 09:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1869,17 +1869,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \openout4 = `demo.toc'.
 
 
-[2] (./chapter/chapter1.tex
+[2]
+\openout2 = `chapter/chapter1.aux'.
+
+ (./chapter/chapter1.tex
 第1章
-) (./chapter/chapter2.tex [1
+) [1
 
 
 
-] [2
+
+]
+\openout2 = `chapter/chapter2.aux'.
+
+ (./chapter/chapter2.tex [2
+
+
 
 ]
 第2章
-[3]) (./chapter/chapter3.tex [4]
+[3]) [4]
+\openout2 = `chapter/chapter3.aux'.
+
+ (./chapter/chapter3.tex
 第3章
 \g__fontspec_family_FangSong_int=\count320
 .................................................
@@ -1914,8 +1926,15 @@ Underfull \vbox (badness 1406) has occurred while \output is active []
 
  [5
 
+
+
 ]
-[6]) (./chapter/chapter4.tex [7] [8
+[6]) [7]
+\openout2 = `chapter/chapter4.aux'.
+
+ (./chapter/chapter4.tex [8
+
+
 
 ]
 第4章
@@ -1930,16 +1949,26 @@ See the caption package documentation for explanation.
 
 ) [11] [12
 
-] (./chapter/citation.tex
+
+]
+\openout2 = `chapter/citation.aux'.
+
+ (./chapter/citation.tex
 Underfull \hbox (badness 4752) in paragraph at lines 3--4
 []\TU/SimSun(0)/m/n/12.045 中 国 科 学 技 术 信 息 研 究 所\TU/TimesNewRoman(0)/m/n/12.045
  .2018 \TU/SimSun(0)/m/n/12.045 年 度 中 国 科 技 论 文 统 计 与 分 析 \TU/TimesNewRoman(0)/
 m/n/12.045 [J]. \TU/SimSun(0)/m/n/12.045 科
  []
 
-) (./chapter/thanking.tex [13
+) [13
 
-] [14
+
+]
+\openout2 = `chapter/thanking.aux'.
+
+ (./chapter/thanking.tex [14
+
+
 
 ]
 
@@ -1947,11 +1976,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 12.045pt
 (hyperref)                replaced by space on input line 1.
 
-)
+) [15]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
- [15]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
- (./demo.aux)
+ (./demo.aux (./chapter/chapter1.aux) (./chapter/chapter2.aux)
+(./chapter/chapter3.aux) (./chapter/chapter4.aux) (./chapter/citation.aux)
+(./chapter/thanking.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 36.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
 Package rerunfilecheck Info: File `demo.out' has not changed.
@@ -1967,8 +1997,8 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
- 28167 strings out of 492970
- 567118 string characters out of 6137297
+ 28179 strings out of 492970
+ 567371 string characters out of 6137297
  683893 words of memory out of 5000000
  31787 multiletter control sequences out of 15000+600000
  543693 words of font info for 122 fonts, out of 8000000 for 9000

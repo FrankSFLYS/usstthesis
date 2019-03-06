@@ -255,7 +255,7 @@
     \afterpage{\thispagestyle{empty}}
     \\\\\noindent{\bfseries KEY WORDS: }
 }
-\providecommand{\outputfrontmatter}{
+\providecommand{\includefrontmatter}{
 \setlength{\TPHorizModule}{1cm}  % textblock horiz length reference
 \setlength{\TPVertModule}{1cm}   % textblock verti length reference
 \frontmatter
