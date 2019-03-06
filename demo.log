@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  6 MAR 2019 13:30
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  6 MAR 2019 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7,7 +7,7 @@ entering extended mode
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (./usstthesis.cls
-Document Class: usstthesis 2019/01/01 v2.9 USST Thesis class
+Document Class: usstthesis 2019/01/01 v2.99 USST Thesis class
 USST Thesis
 (c:/texlive/2018/texmf-dist/tex/latex/ctex/ctexbook.cls
 (c:/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -2007,7 +2007,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
 Here is how much of TeX's memory you used:
  28197 strings out of 492970
  567737 string characters out of 6137297
- 683931 words of memory out of 5000000
+ 683932 words of memory out of 5000000
  31793 multiletter control sequences out of 15000+600000
  543693 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
