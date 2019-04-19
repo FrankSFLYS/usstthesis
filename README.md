@@ -28,7 +28,7 @@
 
 ​        使用过程中有任何问题或者建议，欢迎在 Gitee 上提交 issue 或 Pull Request。
 
-        由于 Github 和 [frank.xin](https://www.frank.xin) 下载速度太慢，而且 Gitee 下载时需要注册，所以建议到蓝奏云下载，下载地址：[usstthesis-v2.99.zip](https://www.lanzous.com/i3u5ggf)。
+由于 Github 和 [frank.xin](https://www.frank.xin) 下载速度太慢，而且 Gitee 下载时需要注册，所以建议到蓝奏云下载，下载地址：[usstthesis-v2.99.zip](https://www.lanzous.com/i3u5ggf)。
 
 ## 使用方法
 
