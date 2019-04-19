@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  6 MAR 2019 18:08
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.12.27)  19 APR 2019 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1131,31 +1131,19 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 . <->"[STKaiB.ttf]/OT:script=latn;language=DFLT;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
-\g__fontspec_family_TimesNewRoman_int=\count270
+\g__fontspec_family_times.ttf_int=\count270
 .................................................
 . fontspec info: "defining-font"
 . 
-. Font family 'TimesNewRoman(0)' created for font 'Times New Roman' with
-. options [Ligatures=TeX].
+. Font family 'times.ttf(0)' created for font 'times.ttf' with options
+. [Ligatures=TeX].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
-. - 'normal' (m/n) with NFSS spec.: <->"Times New
-. Roman/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
-. Roman/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
-. - 'bold' (bx/n) with NFSS spec.: <->"Times New
-. Roman/B/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: <->"Times New
-. Roman/B/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
-. - 'italic' (m/it) with NFSS spec.: <->"Times New
-. Roman/I/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'italic small caps'  (m/itsc) with NFSS spec.: <->"Times New
-. Roman/I/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
-. - 'bold italic' (bx/it) with NFSS spec.: <->"Times New
-. Roman/BI/OT:script=latn;language=DFLT;mapping=tex-text;"
-. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"Times New
-. Roman/BI/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
+. - 'normal' (m/n) with NFSS spec.:
+. <->"[times.ttf]/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.:
+. <->"[times.ttf]/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 .................................................
 LaTeX Info: Redefining \rmfamily on input line 54.
 
@@ -1631,32 +1619,30 @@ LaTeX Font Info:    Redeclaring symbol font `operators' on input line 19.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `normal' on input line 19.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 1
-9.
+(Font)                  OT1/cmr/m/n --> TU/times.ttf(0)/m/n on input line 19.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `bold' on input line 19.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
-19.
+(Font)                  OT1/cmr/bx/n --> TU/times.ttf(0)/m/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
-input line 19.
+(Font)                  TU/times.ttf(0)/m/n --> TU/times.ttf(0)/m/n on input li
+ne 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
- 19.
+(Font)                  OT1/cmr/m/it --> TU/times.ttf(0)/m/it on input line 19.
+
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/bx/n on input line
- 19.
+(Font)                  OT1/cmr/bx/n --> TU/times.ttf(0)/bx/n on input line 19.
+
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/bx/n on
- input line 19.
+(Font)                  TU/times.ttf(0)/m/n --> TU/times.ttf(0)/bx/n on input l
+ine 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/bx/it on input li
-ne 19.
+(Font)                  OT1/cmr/bx/it --> TU/times.ttf(0)/bx/it on input line 1
+9.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
@@ -1739,6 +1725,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--20
 . <->"[STKaiB.ttf]/OT:script=hani;language=DFLT;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
+
+LaTeX Font Warning: Font shape `TU/times.ttf(0)/bx/n' undefined
+(Font)              using `TU/times.ttf(0)/m/n' instead on input line 20.
+
 \g__fontspec_family_STZhongsongB.ttf_int=\count317
 .................................................
 . fontspec info: "defining-font"
@@ -1777,32 +1767,17 @@ LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <15.05624> not available
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.53937> not available
 (Font)              size <10.95> substituted on input line 20.
 
-\g__fontspec_family_STZhongsong_int=\count318
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font "STZhongsong/BI" (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font "STZhongsong/B" (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font "STZhongsong/I" (it probably doesn't exist).
-.................................................
+\g__fontspec_family_STZhongsong.ttf_int=\count318
 .................................................
 . fontspec info: "defining-font"
 . 
-. Font family 'STZhongsong(0)' created for font 'STZhongsong' with options
-. [Script={CJK}].
+. Font family 'STZhongsong.ttf(0)' created for font 'STZhongsong.ttf' with
+. options [Script={CJK}].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
 . - 'normal' (m/n) with NFSS spec.:
-. <->"STZhongsong/OT:script=hani;language=DFLT;"
+. <->"[STZhongsong.ttf]/OT:script=hani;language=DFLT;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
 [1
@@ -1957,9 +1932,9 @@ See the caption package documentation for explanation.
 
  (./chapter/citation.tex
 Underfull \hbox (badness 4752) in paragraph at lines 3--4
-[]\TU/SimSun(0)/m/n/12.045 中 国 科 学 技 术 信 息 研 究 所\TU/TimesNewRoman(0)/m/n/12.045
- .2018 \TU/SimSun(0)/m/n/12.045 年 度 中 国 科 技 论 文 统 计 与 分 析 \TU/TimesNewRoman(0)/
-m/n/12.045 [J]. \TU/SimSun(0)/m/n/12.045 科
+[]\TU/SimSun(0)/m/n/12.045 中 国 科 学 技 术 信 息 研 究 所\TU/times.ttf(0)/bx/n/12.045 .2
+018 \TU/SimSun(0)/m/n/12.045 年 度 中 国 科 技 论 文 统 计 与 分 析 \TU/times.ttf(0)/bx/n/12
+.045 [J]. \TU/SimSun(0)/m/n/12.045 科
  []
 
 ) [13
@@ -1999,11 +1974,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
- 28214 strings out of 492970
- 567948 string characters out of 6137297
- 684988 words of memory out of 5000000
- 31810 multiletter control sequences out of 15000+600000
- 543693 words of font info for 122 fonts, out of 8000000 for 9000
+ 28179 strings out of 492970
+ 566543 string characters out of 6137297
+ 683374 words of memory out of 5000000
+ 31797 multiletter control sequences out of 15000+600000
+ 543613 words of font info for 112 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,15n,94p,10407b,1100s stack positions out of 5000i,500n,10000p,200000b,80000s
 

@@ -46,7 +46,7 @@
 
 \providecommand{\usstthesisset}[1]{\setkeys{usstthesis}{#1}}
 
-\newCJKfontfamily\Zhongsong{STZhongsong}    % 华文中宋
+\newCJKfontfamily\Zhongsong{STZhongsong.ttf}    % 华文中宋
 \newCJKfontfamily\bSong{SCSongB.ttf}    % 宋体粗体
 \newCJKfontfamily\bZhongsong{STZhongsongB.ttf}  % 华文中宋粗体
 \newCJKfontfamily\bKai{STKaiB.ttf}  % 楷体粗体
