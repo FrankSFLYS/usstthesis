@@ -61,7 +61,7 @@
     contentsname = 目\quad 录,
     chapter = {
         number = \arabic{chapter},
-        format = {\bZhongsong\centering\zihao{3}},
+        format = {\bZhongsong\bfseries\centering\zihao{3}},
         numberformat += \bfseries,
         pagestyle = fancy,
         fixskip = true,
@@ -69,14 +69,14 @@
         afterskip = 35pt
     },
     section = {
-        format = {\bSong\zihao{4}},
+        format = {\bSong\bfseries\zihao{4}},
         numberformat += \bfseries,
         aftername = \hspace{0.5em} ,
         beforeskip = 9pt,
         afterskip = 6pt,
     },
     subsection = {
-        format = {\bSong\zihao{-4}},
+        format = {\bSong\bfseries\zihao{-4}},
         numberformat += \bfseries,
         aftername = \hspace{0.5em} ,
         fixskip = true,
