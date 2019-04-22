@@ -47,15 +47,12 @@
 \providecommand{\usstthesisset}[1]{\setkeys{usstthesis}{#1}}
 
 \newCJKfontfamily\Zhongsong{STZhongsong.ttf}    % 华文中宋
-\newCJKfontfamily\bSong{SCSongB.ttf}    % 宋体粗体
+\newCJKfontfamily\bSong{SCSongB.ttf}            % 宋体粗体
 \newCJKfontfamily\bZhongsong{STZhongsongB.ttf}  % 华文中宋粗体
-\newCJKfontfamily\bKai{STKaiB.ttf}  % 楷体粗体
-\newfontfamily\bKaiA{STKaiB.ttf}    % 楷体粗体（英文）
-\setmainfont{Times New Roman}   % 英文字体
-%\setCJKmainfont{Fandol Song}
-%\newfontfamily\bZhongsong{STZhongsong}[BoldFont={STZhongsongB.ttf}]
-%\newfontface\bZhongsong{STZhongsong}[BoldFont={STZhongsongB.ttf}]
-%\usepackage[T1]{fontenc}
+\newCJKfontfamily\bKai{STKaiB.ttf}              % 楷体粗体
+\newfontfamily\bKaiA{STKaiB.ttf}                % 楷体粗体（英文）
+\setmainfont{Times New Roman}                   % 英文字体
+\setCJKmainfont{STSong}
 
 \ctexset {
     contentsname = 目\quad 录,
@@ -314,7 +311,7 @@
     \end{tabularx}
 \end{flushright}
 \afterpage{\thispagestyle{empty}}
-\input{chapter/abstract.tex}
+\input{element/abstract.tex}
 
 \cleardoublepage
 \pagenumbering{roman}

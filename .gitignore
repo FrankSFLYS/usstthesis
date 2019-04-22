@@ -1,3 +1,7 @@
 *.log
 *.out
 *.xdv
+*.aux
+*.bcf
+*.toc
+*.xdv

@@ -14,6 +14,110 @@
 
 ​        文件中的 `resource/egf.png` 和 `resource/usst-text.png` 来源于“上海理工大学本科毕业设计(论文)撰写规范及样本.docx”，图片版权归上海理工大学所有。
 
+## 引言
+
+​        使用本文档类需要具有基本的 LaTeX 使用知识，如果需要，可以查阅 [一份（不太）简短的 LaTeX 2e 介绍](http://mirrors.ctan.org/info/lshort/chinese/lshort-zh-cn.pdf)，以及本文档类的 [Github Wiki 页面](<https://github.com/FrankSFLYS/usstthesis/wiki>)（将会持续更新）。其实刚入门，对 LaTeX 了解不多的人也可以很好地使用它，网上也有很多中文资料和答疑，实在搜索不到的问题可以试着去 [LaTeX Stack Excange]([http://tex.stackexchange.com](http://tex.stackexchange.com/)) 搜索英文资源。
+
+​        由于 LaTeX 编译时会生成很多附加文件，所以可能需要一个简单的脚本将这些附加文件去除，本项目提供了很多脚本，使用方法如下：
+
+### Windows 平台
+
+1. 使用 `git clone` 或者直接下载本项目之后，建议首先在你的电脑上试运行一下，首先解压项目文件，然后在目录中打开终端（不推荐使用 cmd，推荐 Windows Powershell，在文件夹中按住 `Shift` 并右键，然后点击“在此处打开 Powershell 窗口(`S`)”，即可打开 Windows Powershell 窗口，如果你已经正确安装和配置了 LaTeX（否则请搜索或查阅相关资料），在窗口中输入以下内容并且回车。
+
+```powershell
+xelatex demo
+```
+
+2. 如果顺利编译并且生成了 `demo.pdf`，证明你的环境没问题，可以进行第 4 步，否则请参阅第 3 步。
+
+3. 如果命令行窗口提示“xelatex 不是可用的命令”等，说明你没有正确配置环境变量，你需要将 LaTeX 的 bin 目录添加到环境变量的 path 中；如果 xelatex 正确运行但是报错了，则可以根据报错的内容查看错误来源，如果提示
+
+   ```
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !
+   ! fontspec error: "font-not-found"
+   !
+   ! The font "STSong" cannot be found.
+   !
+   ! See the fontspec documentation for further information.
+   !
+   ! For immediate help type H <return>.
+   !...............................................
+   ```
+
+   说明缺失字体，你可以下载字体包，地址：[字体包.zip](https://www.lanzous.com/b689722/)，密码 `24qa`，将缺失的字体解压到项目文件夹中，然后修改 `usstthesis.cls` 的相应位置，上面提示缺失“STSong（宋体）”，则需要修改 `\setCJKmainfont{STSong}` 为 `\setCJKmainfont{STSong.ttf}`，其他类似。此处未提到的问题你也可以提交 issue。
+
+4. 正确编译之后，就可以生成自己的毕业论文文件夹了，只需要在终端中输入
+
+   ```powershell
+   ./Generate.bat
+   ```
+
+   就可以在项目目录中生成一个 `MyThesis` 的目录，你可以将其复制到你喜欢的地方，然后开始编写你的毕业论文。
+
+5. 在 `MyThesis` 目录中有 `c.bat`，你可以在终端中直接输入 `./c.bat`（或双击运行）即可直接编译生成 `MyThesis.pdf`，并且在最后还会统计你的正文字数（即不包括承诺书、摘要、ABSTRACT、引用、致谢等的字数），格式为
+
+   ```
+   SUMWEIGHTS: 0, 1
+   121: File: chapter/chapter1.tex
+   989: File: chapter/chapter2.tex
+   955: File: chapter/chapter3.tex
+   1339: File: chapter/chapter4.tex
+   3404: Total
+   ```
+
+   即代表 `chapter1.tex` 中字数为 121、`chapter2.tex` 中字数为 989，总字数为 3404。
+
+### Linux 平台
+
+1. 使用 `git clone` 或下载本项目之后解压到一个目录，然后在终端中进入目录文件夹，然后在终端中输入以下内容并回车，测试是否可以正确编译 LaTeX。
+
+   ```shell
+   xelatex demo
+   ```
+
+2. 如果编译成功，说明可以正常使用，继续第 4 步，否则请看第 3 步。
+
+3. 如果提示 `xelatex` 的命令不存在，可能是缺少权限，也可能是没有正确设置 LaTeX 的环境变量，你可以搜索或查找文档进行解决，如果提示
+
+   ```
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   !
+   ! fontspec error: "font-not-found"
+   !
+   ! The font "STSong" cannot be found.
+   !
+   ! See the fontspec documentation for further information.
+   !
+   ! For immediate help type H <return>.
+   !...............................................
+   ```
+
+   可能是因为没有相关字体，你可以下载字体包，地址：[字体包.zip](https://www.lanzous.com/b689722/)，密码 `24qa`，将缺失的字体解压到项目文件夹中，然后修改 `usstthesis.cls` 的相应位置，上面提示缺失“STSong（宋体）”，则需要修改 `\setCJKmainfont{STSong}` 为 `\setCJKmainfont{STSong.ttf}`，其他类似。此处未提到的问题你也可以提交 issue。
+
+4. 正确编译之后就可以生成你自己的项目目录了，在终端中输入
+
+   ```shell
+   ./Generate.sh
+   ```
+
+   会在当前目录中创建一个 `MyThesis` 的文件夹，将其整体复制到你喜欢的地方，就可以在 `MyThesis` 文件夹中编写你的毕业论文了。
+
+5. 在 `MyThesis` 目录中终端输入 `./c.sh` 可以一步编译生成 `MyThesis.pdf`，并且在最后输入文档的字数统计，字数仅包括正文字数（即不包括承诺书、摘要、ABSTRACT、引用、致谢等的字数），格式为
+
+   ```
+   SUMWEIGHTS: 0, 1
+   121: File: chapter/chapter1.tex
+   989: File: chapter/chapter2.tex
+   955: File: chapter/chapter3.tex
+   1339: File: chapter/chapter4.tex
+   3404: Total
+   ```
+
+   代表 `chapter2.tex` 中有 989 字，一共有 3404 字。
+
+### [Overleaf](https://www.overleaf.com/) 在线平台用法将会在之后推出
+
 ### 已知问题
 
 1. 本文档类中所使用的华文中宋粗体、宋体粗体要比 Word 模板中的更粗；
