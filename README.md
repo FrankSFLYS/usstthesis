@@ -18,7 +18,35 @@
 
 ​        使用本文档类需要具有基本的 LaTeX 使用知识，如果需要，可以查阅 [一份（不太）简短的 LaTeX 2e 介绍](http://mirrors.ctan.org/info/lshort/chinese/lshort-zh-cn.pdf)，以及本文档类的 [Github Wiki 页面](<https://github.com/FrankSFLYS/usstthesis/wiki>)（将会持续更新）。其实刚入门，对 LaTeX 了解不多的人也可以很好地使用它，网上也有很多中文资料和答疑，实在搜索不到的问题可以试着去 [LaTeX Stack Excange]([http://tex.stackexchange.com](http://tex.stackexchange.com/)) 搜索英文资源。
 
-​        由于 LaTeX 编译时会生成很多附加文件，所以可能需要一个简单的脚本将这些附加文件去除，本项目提供了很多脚本，使用方法如下：
+​        由于 LaTeX 编译时会生成很多附加文件，对于不了解的用户造成困扰，所以在 `gitignore` 中将这些文件忽略了，并且对于项目的说明如下：
+
+1. 本项目中最重要的文件就是 `usstthesis.cls`，`cls` 文件即“Class”，文档类，如果你要从零开始创建自己的毕业论文项目文件夹，你可以将此文件复制到你的目录中，然后在 LaTeX 主文件中使用 
+
+   ```
+   \documentclass{usstthesis}
+   ```
+
+   指定文档类；
+
+2. 显然，所有的 `ttf` 字体文件一定要有，并且需要与 `usstthesis.cls` 中声明的文件名相同，否则编译不通过；
+
+3. `demo.tex` 是毕业论文的 LaTeX 主文件，使用
+
+   ```
+   xelatex demo.tex
+   ```
+
+   即编译此文件，它里面可以使用 `\include{}` 包含其他 `tex` 文件。当然你可以使用其他文件名，但是注意文件名和路径不能含有非 ASCII 字符，否则编译可能出错；
+
+4. 所有的文件夹建议保留，将文档中的元素按照文件夹分类存放有利于查看和整理；
+
+5. `demo.pdf` 即为编译生成的文件，项目中保留此文件是为了方便查看效果；
+
+6. `c.bat`、`c.sh`、`Generate.bat`、`Generate.sh` 下面有介绍，你可以使用编辑器打开查看里面的内容；
+
+7. `LICENSE` 是项目的协议文件。
+
+​        本项目提供了很多脚本，使用方法如下：
 
 ### Windows 平台
 
