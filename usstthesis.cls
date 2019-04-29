@@ -8,7 +8,7 @@
 %% c = 299792458 m/s
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{usstthesis}
-    [2019/01/01 v2.99 USST Thesis class]
+    [2019/01/01 v2.997 USST Thesis class]
 \typeout{USST Thesis}
 
 \LoadClass[twoside, zihao=-4, openright]{ctexbook} % Based on ctexart, twosided
@@ -45,20 +45,40 @@
 }
 
 \providecommand{\usstthesisset}[1]{\setkeys{usstthesis}{#1}}
-
-\newCJKfontfamily\Zhongsong{STZhongsong.ttf}    % 华文中宋
-\newCJKfontfamily\bSong{SCSongB.ttf}            % 宋体粗体
-\newCJKfontfamily\bZhongsong{STZhongsongB.ttf}  % 华文中宋粗体
-\newCJKfontfamily\bKai{STKaiB.ttf}              % 楷体粗体
-\newfontfamily\bKaiA{STKaiB.ttf}                % 楷体粗体（英文）
+\RequirePackage{xeCJK}
+% \begingroup\newif\ifmy
+% \IfFileExists{\jobname.txt}{}{\mytrue}
+% \ifmy
+% \begin{filecontents}{\jobname.txt}
+%   Hello World
+% \end{filecontents}
+% \fi\endgroup
+\IfFileExists{STZhongsong.ttf}{%
+    \newCJKfontfamily\Zhongsong{STZhongsong.ttf}[AutoFakeBold=4] % 使用华文中宋 ttf 文件
+    \newCJKfontfamily\ZhongsongNormal{STZhongsong.ttf}[AutoFakeBold=false] % 普通粗细的华文中宋
+}{%
+    \newCJKfontfamily\Zhongsong{STZhongsong}[AutoFakeBold=4] % 使用系统华文中宋
+    \newCJKfontfamily\ZhongsongNormal{STZhongsong}[AutoFakeBold=false] % 普通粗细的华文中宋
+}
+\IfFileExists{STKaiti.ttf}{%
+    \newCJKfontfamily\Kaiti{STKaiti.ttf}[AutoFakeBold=2]     % 使用华文楷体 ttf 文件
+    \newfontfamily\bKaiA{STKaiti.ttf}[AutoFakeBold=2]        % 英文楷体
+}{%
+    \newCJKfontfamily\Kaiti{STKaiti}[AutoFakeBold=2]         % 使用系统华文楷体
+    \newfontfamily\bKaiA{STKaiti}[AutoFakeBold=2]            % 英文楷体
+}
 \setmainfont{Times New Roman}                   % 英文字体
-\setCJKmainfont{STSong}
+\IfFileExists{STSong.ttf}{%
+    \setCJKmainfont[AutoFakeBold=1]{STSong.ttf} % 使用华文宋体 ttf 文件
+}{%
+    \setCJKmainfont[AutoFakeBold=1]{STSong}     % 使用系统华文宋体
+}
 
 \ctexset {
     contentsname = 目\quad 录,
     chapter = {
         number = \arabic{chapter},
-        format = {\bZhongsong\bfseries\centering\zihao{3}},
+        format = {\Zhongsong\bfseries\centering\zihao{3}},
         numberformat += \bfseries,
         pagestyle = fancy,
         fixskip = true,
@@ -66,14 +86,14 @@
         afterskip = 35pt
     },
     section = {
-        format = {\bSong\bfseries\zihao{4}},
+        format = {\bfseries\zihao{4}},
         numberformat += \bfseries,
         aftername = \hspace{0.5em} ,
         beforeskip = 9pt,
         afterskip = 6pt,
     },
     subsection = {
-        format = {\bSong\bfseries\zihao{-4}},
+        format = {\bfseries\zihao{-4}},
         numberformat += \bfseries,
         aftername = \hspace{0.5em} ,
         fixskip = true,
@@ -84,7 +104,7 @@
 
 \RequirePackage{tocloft}    % 目录格式定制
 %\renewcommand{\cftdot}{$\ldots$}    % 使用密集的小点
-\renewcommand{\cfttoctitlefont}{\hfill\bZhongsong\zihao{3}}
+\renewcommand{\cfttoctitlefont}{\hfill\Zhongsong\bfseries\zihao{3}}
 \renewcommand{\cftaftertoctitle}{\hfill}
 \renewcommand{\cftdotsep}{0.1}      % 点间距
 \setlength{\cftbeforechapskip}{6pt}
@@ -94,7 +114,7 @@
 \setlength{\cftsubsecindent}{2em}
 \setlength{\cftsecnumwidth}{1em}
 \setlength{\cftsubsecnumwidth}{2em}
-\renewcommand{\cftchapfont}{\bfseries\bSong\zihao{-4}}
+\renewcommand{\cftchapfont}{\bfseries\zihao{-4}}
 \renewcommand{\cftsecfont}{\zihao{-4}}
 \renewcommand{\cftsubsecfont}{\zihao{-4}}
 \renewcommand{\cftchapleader}{\bfseries\cftdotfill{\cftchapdotsep}}
@@ -246,7 +266,7 @@
 }
 \providecommand{\keywordscn}{
     \afterpage{\thispagestyle{empty}}
-    \\\\\noindent{\bSong 关键词：}
+    \\\\\noindent{\bfseries 关键词：}
 }
 \providecommand{\abstracten}{
     \cleardoublepage 
@@ -270,17 +290,17 @@
 \noindent\includegraphics[width=6.96cm,height=1.69cm]{element/usst-text.jpg}%
 \\[1.82cm]
 \begin{center}
-    {\bKai\fontsize{33}{35}\selectfont 本科毕业设计(论文)} \\[0.19cm]
+    {\bfseries\Kaiti\fontsize{33}{35}\selectfont 本科毕业设计(论文)} \\[0.19cm]
     {\bfseries FINAL PROJECT/THESIS OF UNDERGRADUATE}   \\[0.9ex]
-    {\bKaiA\zihao{3} (\usstthesis@session}{\bKai\zihao{3} 届}{\bKaiA\zihao{3} )}   \\
+    {\bfseries\bKaiA\zihao{3} (\usstthesis@session}{\bfseries\Kaiti\zihao{3} 届}{\bfseries\Kaiti\zihao{3} )}   \\
     \rule{0em}{15.4ex} \\
-    \parbox{13.2cm}{\centering\bfseries\bZhongsong\zihao{2}\usstthesis@title}  \\
+    \parbox{13.2cm}{\centering\bfseries\Zhongsong\zihao{2}\usstthesis@title}  \\
     \rule{0em}{7.2ex} \\
     \parbox{13.2cm}{\centering\bfseries\zihao{-2}\usstthesis@titleen}
     \begin{textblock}{13.2}(3.8,18.5)
-        \bKai\zihao{4}
+        \bfseries\Kaiti\zihao{4}
         \renewcommand\arraystretch{1.3}
-        \begin{tabular}{>{\centering\arraybackslash}p{3.8cm}>{\centering\arraybackslash\Zhongsong}p{7.5cm}}
+        \begin{tabular}{>{\centering\arraybackslash}p{3.8cm}>{\centering\arraybackslash\ZhongsongNormal}p{7.5cm}}
         学\hspace{2\ccwd}院 & \usstthesis@institute \\ \clineB{2-2}{2}
         专\hspace{2\ccwd}业 & \usstthesis@major     \\ \clineB{2-2}{2}
         学生姓名            & \usstthesis@name      \\ \clineB{2-2}{2}

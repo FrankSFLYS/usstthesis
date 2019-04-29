@@ -8,11 +8,11 @@
 
 ## 注意事项
 
-​        学校并未规定使用（或不使用）LaTeX 进行论文写作，并且本文档类中部分格式暂无法做到与学校给出的 Word 版本完全相同，所以使用本模板类造成（包括但不限于）论文审核不通过等问题作者不负责，请使用时慎酌。
-
-​        文件中包含了四个字体文件，分别为 `SCSongB.ttf`(宋体粗体)、`STKaiB.ttf`(楷体粗体)、`STZhongsong.ttf`(华文中宋) 和 `STZhongsongB.ttf`(华文中宋粗体)，是由于 LaTeX 无法像 Word 一样处理粗体，为了更相同而嵌入的字体，字体版权不属于文档类作者，商业使用时请与字体原作者和出版商联系。**部分系统（如 Ubuntu 等）未附带宋体或 Times New Roman 字体，需要使用者自行下载安装**。
+​        学校并未规定使用（或不使用）LaTeX 进行论文写作，并且本文档类中部分格式暂无法做到与学校给出的 Word 版本完全相同，所以使用本模板类造成（包括但不限于）论文审核不通过等问题作者不负责，请使用时慎酌。**部分系统（如 Ubuntu 等）未附带宋体或 Times New Roman 字体，需要使用者自行下载安装**。
 
 ​        文件中的 `resource/egf.png` 和 `resource/usst-text.png` 来源于“上海理工大学本科毕业设计(论文)撰写规范及样本.docx”，图片版权归上海理工大学所有。
+
+[TOC]
 
 ## 引言
 
@@ -73,7 +73,7 @@ xelatex demo
    !...............................................
    ```
 
-   说明缺失字体，你可以下载字体包，地址：[字体包.zip](https://www.lanzous.com/b689722/)，密码 `24qa`，将缺失的字体解压到项目文件夹中，然后修改 `usstthesis.cls` 的相应位置，上面提示缺失“STSong（宋体）”，则需要修改 `\setCJKmainfont{STSong}` 为 `\setCJKmainfont{STSong.ttf}`，其他类似。此处未提到的问题你也可以提交 issue。
+   说明缺失字体，你可以下载字体包，地址：[字体包-v2.997.zip](https://www.lanzous.com/b689722/)，密码 `24qa`，将缺失的字体解压到项目文件夹中，再次编译即可，文档类会自动搜索字体文件。此处未提到的问题你也可以提交 issue。
 
 4. 正确编译之后，就可以生成自己的毕业论文文件夹了，只需要在终端中输入
 
@@ -121,7 +121,7 @@ xelatex demo
    !...............................................
    ```
 
-   可能是因为没有相关字体，你可以下载字体包，地址：[字体包.zip](https://www.lanzous.com/b689722/)，密码 `24qa`，将缺失的字体解压到项目文件夹中，然后修改 `usstthesis.cls` 的相应位置，上面提示缺失“STSong（宋体）”，则需要修改 `\setCJKmainfont{STSong}` 为 `\setCJKmainfont{STSong.ttf}`，其他类似。此处未提到的问题你也可以提交 issue。
+   可能是因为没有相关字体，你可以下载字体包，地址：[字体包-v2.997.zip](https://www.lanzous.com/b689722/)，密码 `24qa`，将缺失的字体解压到项目文件夹中，再次编译即可，文档类会自动搜索字体文件。此处未提到的问题你也可以提交 issue。
 
 4. 正确编译之后就可以生成你自己的项目目录了，在终端中输入
 
@@ -232,7 +232,7 @@ xelatex demo
     \bibitem{机器学习}刘琴.机器学习[J].武汉工程职业技术学院学报,2001,13(2):41-44.
 \end{citelist}
 
-\include{chapter/thanking} % 致谢
+\include{element/thanking} % 致谢
 
 \end{document} % 文档结束
 ```
@@ -268,6 +268,8 @@ xelatex demo
 \subsection{chap1-section1}
 \par Paragraph.
 ```
+
+​        另外，实际使用时建议不要将章节命名为 `chapter1.tex` 等，而是按照其内容命名。
 
 ## 图片、表格和代码块
 
@@ -337,8 +339,18 @@ xelatex demo
 
 ## 参考文献
 
-​        文档使用默认的参考文献处理方式（使用了 `cite` 宏包），建议将参考文献的内容单独放在 `chapter/citation.tex` 中，在文中使用 `\input{chapter/citation.tex}` 包含。参考文献的格式可以参考文件内容，主流的学术搜索网站可以直接生成参考文献内容，复制到 `citation.tex` 中的 `\bibitem{}` 条目中即可。
+​        文档使用默认的参考文献处理方式（使用了 `cite` 宏包），建议将参考文献的内容单独放在 `element/citation.tex` 中，在文中使用 `\include{element/citation.tex}` 包含。参考文献的格式可以参考文件内容，主流的学术搜索网站可以直接生成参考文献内容，复制到 `citation.tex` 中的 `\bibitem{}` 条目中即可。
 
 ## 致谢
 
-​        致谢的内容请在 `chapter/thanking.tex` 中编辑，并且在正文中使用 `\inout{chapter/thanking.tex}` 导入。
+​        致谢的内容请在 `element/thanking.tex` 中编辑，并且在正文中使用 `\include{element/thanking.tex}` 导入。
+
+## 关于盲审和查重
+
+​        盲审和查重时要求将正文以外的内容去掉，而且最好使用 docx 格式，所以你可以下载 [pandoc](<https://pandoc.org/installing.html>)，然后在主文件（此处是 `demo.tex` ）中搜索“盲审”，按要求将指定的行注释掉，然后在命令行中使用 `pandoc` ：
+
+```powershell
+pandoc -o outputfilename.docx -f latex -t docx demo.tex
+```
+
+即将 `demo.tex` 转换为 `outputfilename.docx` 的 doc 文件，虽然转换之后格式没了，但是所有文字都可复制（使用 pdf 可能会出现查重时乱码的情况）。
