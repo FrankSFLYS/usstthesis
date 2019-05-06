@@ -175,6 +175,8 @@
 \RequirePackage{newfloat}
 \colorlet{codeblue}{blue!25!black}
 \colorlet{codegreen}{green!10!black}
+\colorlet{codered}{red!15!blue!50!black}
+\colorlet{codeyellow}{yellow!15!blue!50!black}
 \colorlet{codegray}{red!50!green!50!blue}
 \colorlet{codemauve}{red!60!blue!40!black}
 % \makeatletter
@@ -194,7 +196,9 @@
 	tabsize=4,
 	commentstyle=\color{codegreen},    % comment style
 	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-	keywordstyle=\color{codeblue},       % keyword style
+    keywordstyle=\color{codeblue},       % keyword style
+    keywordstyle=[2]\color{codered},
+    keywordstyle=[3]\color{codeyellow},
 	stringstyle=\color{codemauve}\ttfamily,     % string literal style
 	frame=single,
 	frameround=fttt,
