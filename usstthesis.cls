@@ -155,6 +155,7 @@
 \RequirePackage{caption}    % \captionsetup
 \DeclareCaptionFont{wuhao}{\zihao{5}}
 \captionsetup {
+    labelsep=quad,
     font = {wuhao}
 }
 
