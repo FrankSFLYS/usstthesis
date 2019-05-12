@@ -102,7 +102,8 @@
     }
 }
 
-\RequirePackage{tocloft}    % 目录格式定制
+\RequirePackage{subfigure}
+\RequirePackage[subfigure]{tocloft}    % 目录格式定制
 %\renewcommand{\cftdot}{$\ldots$}    % 使用密集的小点
 \renewcommand{\cfttoctitlefont}{\hfill\Zhongsong\bfseries\zihao{3}}
 \renewcommand{\cftaftertoctitle}{\hfill}
