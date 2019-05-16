@@ -99,9 +99,20 @@
         fixskip = true,
         beforeskip = 13pt,
         afterskip = 9pt,
+    },
+    subsubsection = {   % （非标准）小小节定义，可以根据需求自己修改
+        format = {\bfseries\zihao{-4}},
+        name = {,)},
+        number = {\arabic{subsubsection}},
+        numberformat += \bfseries,
+        aftername = \hspace{0.5em},
+        fixskip = true,
+        beforeskip = 10pt,
+        afterskip = 7pt,
     }
 }
 
+% issue:#1，遇到与 subfig、subfloat 宏包冲突时，请将下面两行中的 subfigure 注释掉
 \RequirePackage{subfigure}
 \RequirePackage[subfigure]{tocloft}    % 目录格式定制
 %\renewcommand{\cftdot}{$\ldots$}    % 使用密集的小点
@@ -142,7 +153,8 @@
     \renewcommand{\footrulewidth}{0pt}  %
 }
 
-\setcounter{secnumdepth}{2}  % 目录编号的深度, 2 表示到 subsection
+\setcounter{secnumdepth}{3}  % 编号的深度, 3 表示到 subsubsection
+\setcounter{tocdepth}{2}     % 目录的深度，2 表示到 subsection
 
 \RequirePackage{amsmath}    % \numberwithin{}{}
 \numberwithin{equation}{chapter}    % 公式编号以 *.* 为格式

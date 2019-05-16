@@ -40,7 +40,11 @@
 \par 公式居中书写，建议使用 \lstinline|equation| 等公式环境，公式较长时应在“$=$”前转行或在“$+$、$-$、$\times$、$\div$”等运算符号处转行，等号或运算符号应在转行后的行首。公式的编号用圆括号括起来放在公式右边行末，公式和编号之间留空。微分算子可使用 \lstinline|usstthesis| 文档类定义的 \lstinline|\dif|。例\autoref{equation:1}。
 \begin{equation}
     \label{equation:1}
-    F(j\omega)=\int_{-\infty}^{\infty}f(t)e^{-j\omega t}\dif t
+    \begin{aligned}
+F(j\omega) & \\
+&=\int_{-\infty}^{\infty}f(t)e^{-j\omega t}\dif t \\
+&+\sum_{n=0}^{\infty} f^{(n)}(t)
+    \end{aligned}
 \end{equation}
 
 \section{表格}
