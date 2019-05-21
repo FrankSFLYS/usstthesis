@@ -1,6 +1,6 @@
 # 上海理工大学本科毕业设计(论文) LaTeX 文档类
 
-[![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()  [![Version](https://img.shields.io/badge/version-2.99-yellow.svg)]()
+[![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()  [![Version](https://img.shields.io/badge/version-2.9979-yellow.svg)]()
 
 **作者：[MkSwQi](http://frank.xin)**
 

@@ -8,7 +8,7 @@
 %% c = 299792458 m/s
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{usstthesis}
-    [2019/01/01 v2.997 USST Thesis class]
+    [2019/01/01 v2.9979 USST Thesis class]
 \typeout{USST Thesis}
 
 \LoadClass[twoside, zihao=-4, openright]{ctexbook} % Based on ctexart, twosided
