@@ -262,6 +262,8 @@
     \begin{thebibliography}{99}%
     \addcontentsline{toc}{chapter}{参考文献}%
     \phantomsection %
+    \zihao{5} %
+    \setlength{\itemsep}{0pt} %
     }{%
     \end{thebibliography}%
 }
