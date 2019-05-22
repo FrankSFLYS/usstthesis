@@ -22,9 +22,10 @@
 
 \RequirePackage{xkeyval}    % key-val sets
 
-\define@cmdkeys{usstthesis}[usstthesis@]{session, title, titleen, institute, major, name, number, mentor, date}[none]
+\define@cmdkeys{usstthesis}[usstthesis@]{session, title, longtitle, titleen, institute, major, name, number, mentor, date}[none]
 \define@key{usstthesis}{session}[某]{\gdef\usstthesis@session{#1}}
-\define@key{usstthesis}{title}[你还未设置论文题目]{\gdef\usstthesis@title{#1}}
+\define@key{usstthesis}{title}[你还未设置论文短题目]{\gdef\usstthesis@title{#1}}
+\define@key{usstthesis}{longtitle}[你还未设置论文长题目]{\gdef\usstthesis@longtitle{#1}}
 \define@key{usstthesis}{titleen}[You have not yet set your English title]{\gdef\usstthesis@titleen{#1}}
 \define@key{usstthesis}{institute}[你还未设置学院]{\gdef\usstthesis@institute{#1}}
 \define@key{usstthesis}{major}[你还未设置专业]{\gdef\usstthesis@major{#1}}
@@ -35,6 +36,7 @@
 \setkeys{usstthesis}{
     session=某,   % 届
     title=你还未设置论文题目,   % 论文题目
+    longtitle=请在设置中添加 longtitle 设置项\\ 设置长题目，支持强制折行,
     titleen=You have not yet set your English title,    %论文英文题目
     institute=你还没有设置你的学院名称, % 学院名称
     major=你还未设置专业,   % 专业名称
@@ -307,14 +309,14 @@
 \thispagestyle{empty}
 \begin{titlepage}
 \makeatletter
-\noindent\includegraphics[width=6.96cm,height=1.69cm]{element/usst-text.jpg}%
-\\[1.82cm]
+\noindent\hspace{0.3cm}\includegraphics[width=6.4cm]{element/usst-text-cnen.pdf}%
+\\[2cm]
 \begin{center}
     {\bfseries\Kaiti\fontsize{33}{35}\selectfont 本科毕业设计(论文)} \\[0.19cm]
     {\bfseries FINAL PROJECT/THESIS OF UNDERGRADUATE}   \\[0.9ex]
     {\bfseries\bKaiA\zihao{3} (\usstthesis@session}{\bfseries\Kaiti\zihao{3} 届}{\bfseries\Kaiti\zihao{3} )}   \\
     \rule{0em}{15.4ex} \\
-    \parbox{13.2cm}{\centering\bfseries\Zhongsong\zihao{2}\usstthesis@title}  \\
+    \parbox{13.2cm}{\centering\bfseries\Zhongsong\zihao{2}\usstthesis@longtitle}  \\
     \rule{0em}{7.2ex} \\
     \parbox{13.2cm}{\centering\bfseries\zihao{-2}\usstthesis@titleen}
     \begin{textblock}{13.2}(3.8,18.5)

@@ -10,7 +10,7 @@
 
 ​        学校并未规定使用（或不使用）LaTeX 进行论文写作，并且本文档类中部分格式暂无法做到与学校给出的 Word 版本完全相同，所以使用本模板类造成（包括但不限于）论文审核不通过等问题作者不负责，请使用时慎酌。**部分系统（如 Ubuntu 等）未附带宋体或 Times New Roman 字体，需要使用者自行下载安装**。
 
-​        文件中的 `resource/egf.png` 和 `resource/usst-text.png` 来源于“上海理工大学本科毕业设计(论文)撰写规范及样本.docx”，图片版权归上海理工大学所有。
+​        文件中的 `resource/egf.png` 来自“上海理工大学本科毕业设计(论文)撰写规范及样本.docx”， `resource/usst-text-cnen.pdf` 来自“上海理工大学视觉校园视觉形象识别系统（VIS）”（访问地址：[校园视觉形象识别系统](http://www.usst.edu.cn/2018/0301/c199a21804/page.htm)），图片版权归上海理工大学所有。
 
 -   [上海理工大学本科毕业设计(论文) LaTeX
     文档类](#上海理工大学本科毕业设计论文-latex-文档类)
@@ -62,7 +62,7 @@
 
 6. `c.bat`、`c.sh`、`Generate.bat`、`Generate.sh` 下面有介绍，你可以使用编辑器打开查看里面的内容；
 
-7. `LICENSE` 是项目的协议文件。
+7. `LICENSE` 是项目的开源协议说明，本项目使用 Apache 2.0 开源协议。
 
 ​        本项目提供了很多脚本，使用方法如下：
 
@@ -178,8 +178,6 @@ xelatex demo
 
 ​        使用过程中有任何问题或者建议，欢迎在 Gitee 上提交 issue 或 Pull Request。
 
-由于 Github 和 [frank.xin](https://www.frank.xin) 下载速度太慢，而且 Gitee 下载时需要注册，所以建议到蓝奏云下载，下载地址：[usstthesis-v2.99.zip](https://www.lanzous.com/b689722/)，密码：`24qa`。
-
 ## 使用方法
 
 ​        在文档（例如 `thesis.tex`）的开头直接使用
@@ -225,7 +223,8 @@ xelatex demo
 
 \usstthesisset{	% 使用此命令设置文档封面等内容
     session=2015,          % 2015 届
-    title=中文标题,         % 论文中文标题
+    title=中文题目，请勿添加换行符,   % 论文中文题目
+    longtitle=中文长标题，仅用于\\ 标题页，支持强制换行,  % 论文长标题，仅用于标题页
     titleen=Englist Title  % 论文英文标题
     institute=学院,         % 学院
     major=专业,             % 专业
@@ -237,7 +236,7 @@ xelatex demo
 
 \begin{document} % 开始文档
 \includefrontmatter % 输出 1~5 的内容
-% 注意，摘要和 ABSTRACT 的内容请在 ./chapter/abstract.tex 中
+% 注意，摘要和 ABSTRACT 的内容请在 ./element/abstract.tex 中
 % 编辑
 
 \mainmatter % 论文主体内容
@@ -247,6 +246,7 @@ xelatex demo
 
 \backmatter % 论文附加部分
 \begin{citelist}	% 参考文献
+    % “机器学习”是在文中引用时使用的，例如 某某某使用了某某某方法\cite{机器学习}。代表引用此条目
     \bibitem{机器学习}刘琴.机器学习[J].武汉工程职业技术学院学报,2001,13(2):41-44.
 \end{citelist}
 
@@ -255,7 +255,7 @@ xelatex demo
 \end{document} % 文档结束
 ```
 
-​        其中，`citelist` 环境是封装了的 `thebibliography`，使用方法与 `thebibliography`相同，并且可以自动将“参考文献”添加到目录中。另外，为了主体结构清晰，将摘要和 ABSTRACT 放在了 `chapter/abstract.tex` 中，`abstract.tex`的内容如下：
+​        其中，`citelist` 环境是封装了的 `thebibliography`，使用方法与 `thebibliography`相同，并且可以自动将“参考文献”添加到目录中。另外，为了主体结构清晰，将摘要和 ABSTRACT 放在了 `element/abstract.tex` 中，`abstract.tex`的内容如下。**请注意，不要在 `\abstractcn`、`\keywordscn`、`\abstracten` 和 `\keywordsen` 之前回车添加空行（可以使用注释符号 `%` 将空行注释掉），否则编译会报“No lines here to end”错误。**
 
 ```latex
 % 中文摘要
@@ -357,11 +357,11 @@ xelatex demo
 
 ## 参考文献
 
-​        文档使用默认的参考文献处理方式（使用了 `cite` 宏包），建议将参考文献的内容单独放在 `element/citation.tex` 中，在文中使用 `\include{element/citation.tex}` 包含。参考文献的格式可以参考文件内容，主流的学术搜索网站可以直接生成参考文献内容，复制到 `citation.tex` 中的 `\bibitem{}` 条目中即可。
+​        文档使用默认的参考文献处理方式（使用了 `cite` 宏包），建议将参考文献的内容单独放在 `element/citation.tex` 中，在文中使用 `\include{element/citation}` 包含。参考文献的格式可以参考文件内容，主流的学术搜索网站可以直接生成参考文献内容，复制到 `citation.tex` 中的 `\bibitem{}` 条目中即可。
 
 ## 致谢
 
-​        致谢的内容请在 `element/thanking.tex` 中编辑，并且在正文中使用 `\include{element/thanking.tex}` 导入。
+​        致谢的内容请在 `element/thanking.tex` 中编辑，并且在正文中使用 `\include{element/thanking}` 导入。
 
 ## 关于盲审和查重
 
