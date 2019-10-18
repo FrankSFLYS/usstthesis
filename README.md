@@ -20,7 +20,7 @@
     -   [引言](#引言)
         -   [Windows 平台](#windows-平台)
         -   [Linux 平台](#linux-平台)
-        -   [Overleaf 平台](#overleaf-在线平台用法将会在之后推出)
+        -   [Overleaf 平台](#Overleaf-在线平台)
         -   [已知问题](#已知问题)
         -   [更多](#更多)
     -   [使用方法](#使用方法)
@@ -164,7 +164,17 @@ xelatex demo
 
    代表 `chapter2.tex` 中有 989 字，一共有 3404 字。
 
-### [Overleaf](https://www.overleaf.com/) 在线平台用法将会在之后推出
+### Overleaf 在线平台
+
+[Overleaf](https://cn.overleaf.com/) 是一个在线的 LaTeX 编辑/编译平台，适合本地编译不方便的情况。使用时需要先注册账号。
+
+首先下载 [项目压缩文件](https://www.lanzous.com/b689722/)，密码 `24qa`，请下载“usstthesis-2.9979-含字体包.zip”，之后在 Overleaf 网页中点击 `New Project`（新建项目），选择 `Upload Project`（上传项目），在弹出的窗口中拖入刚才下载的压缩文件，等待上传并处理完成后就会自动跳转到编辑界面。
+
+此时注意在左上角的 `Menu（菜单）-> Compiler（编译器）` 中，选择 `XeLaTeX`，并且注意 `Main Document（主目录）` 是 `demo.tex`，之后点击界面中的 `Recompile（重新编译）`，如果不出意外的话就可以得到 PDF 文件了。
+
+点击界面左上角的右上箭头可以返回上一页，主界面中点击左下角的国旗图标可以切换语言，但是这个平台汉化不完全，不过也够用了。
+
+`demo.tex` 一般只负责文件的引用和组织，主要的内容在 `chapter` 和 `element` 文件夹中的 `tex` 文件中编辑，内容编辑方面请参考[使用方法](#使用方法)。
 
 ### 已知问题
 
