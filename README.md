@@ -20,7 +20,7 @@
     -   [引言](#引言)
         -   [Windows 平台](#windows-平台)
         -   [Linux 平台](#linux-平台)
-        -   [Overleaf 平台](#Overleaf-在线平台)
+        -   [Overleaf 在线平台](#Overleaf-在线平台)
         -   [已知问题](#已知问题)
         -   [更多](#更多)
     -   [使用方法](#使用方法)
@@ -166,7 +166,7 @@ xelatex demo
 
 ### Overleaf 在线平台
 
-[Overleaf](https://cn.overleaf.com/) 是一个在线的 LaTeX 编辑/编译平台，适合本地编译不方便的情况。使用时需要先注册账号。
+[Overleaf](https://www.overleaf.com?r=cfb571e5&rm=d&rs=b) 是一个网页版的 LaTeX 编辑/编译平台，适合本地编译不方便的情况。使用前需要先注册账号。
 
 首先下载 [项目压缩文件](https://www.lanzous.com/b689722/)，密码 `24qa`，请下载“usstthesis-2.9979-含字体包.zip”，之后在 Overleaf 网页中点击 `New Project`（新建项目），选择 `Upload Project`（上传项目），在弹出的窗口中拖入刚才下载的压缩文件，等待上传并处理完成后就会自动跳转到编辑界面。
 
