@@ -8,7 +8,7 @@
 %% c = 299792458 m/s
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{usstthesis}
-    [2019/01/01 v2.9979 USST Thesis class]
+    [2019/01/01 v2.99792 USST Thesis class]
 \typeout{USST Thesis}
 
 \LoadClass[twoside, zihao=-4, openright]{ctexbook} % Based on ctexart, twosided
@@ -161,7 +161,9 @@
 \RequirePackage{amsmath}    % \numberwithin{}{}
 \numberwithin{equation}{chapter}    % 公式编号以 *.* 为格式
 \numberwithin{table}{chapter}
-\providecommand*{\dif}{\mathop{}\!\mathrm{d}}   % 微分算子 d
+\providecommand*{\dif}{\ensuremath{\mathop{}\!\mathrm{d}}} % 微分算子 d
+\providecommand*{\difx}{\ensuremath{\dif x}} % dx
+\providecommand*{\dify}{\ensuremath{\dif y}} % dy
 
 \RequirePackage{tabularx}
 \RequirePackage{booktabs}   % 三线表 \toprule \midrule \bottomrule
