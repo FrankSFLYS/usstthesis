@@ -1,4 +1,4 @@
-
+# 目录
 -   [使用方法](#使用方法)
 -   [文档类提供的额外功能](#文档类提供的额外功能)
 -   [文档结构](#文档结构)
@@ -12,7 +12,7 @@
 
 # 使用方法
 
-​        在文档（本项目中为 `demo.tex`）的开头直接使用
+​        在文档（本项目中为 `main.tex`）的开头直接使用
 
 ```latex
 \documentclass{usstthesis}
@@ -48,7 +48,7 @@
 > 致谢 
 > 附录 
 
-​更详细的格式要求参见 demo.pdf。使用时，前序固定内容部分使用 `\includefrontmatter` 命令可以直接输出，无需另外编辑，后续内容像书写普通 LaTeX 文档一样，例如，一个完整的、包括各个内容的主文件 `demo.tex` 如下所示：
+​更详细的格式要求参见 main.pdf。使用时，前序固定内容部分使用 `\includefrontmatter` 命令可以直接输出，无需另外编辑，后续内容像书写普通 LaTeX 文档一样，例如，一个完整的、包括各个内容的主文件 `demo.tex` 如下所示：
 
 ```latex
 \documentclass{usstthesis}	% 使用 usstthesis 文档类
@@ -203,9 +203,11 @@
 pandoc -o outputfilename.docx -f latex -t docx demo.tex
 ```
 
-即将 `demo.tex` 转换为 `outputfilename.docx` 的 doc 文件，虽然转换之后格式没了，但是所有文字都可复制（使用 pdf 可能会出现查重时乱码的情况）。
+即将 `main.tex` 转换为 `outputfilename.docx` 的 doc 文件，虽然转换之后格式没了，但是所有文字都可复制（使用 pdf 可能会出现查重时乱码的情况）。
 
-阅读 pandoc 的说明时发现，它可以指定一个 docx 文件作为模板，生成的文档将会使用指定文件的模板。因此可以将学校的模板作为模板直接生成，省去了很多调整格式的麻烦。例如要作为模板的文档存在当前目录，为 `ref.docx`，在命令行中使用
+## 使用模板转换为 docx
+
+阅读 pandoc 的说明时发现，它可以指定一个 docx 文件作为模板，生成的文档将会使用指定文件的模板。因此可以将学校的模板作为模板直接生成，省去了很多调整格式的麻烦。本项目中已经包含了模板文件 `ref.docx`，在命令行中使用
 
 ```powershell
 pandoc --reference-doc ref.docx -o DocThesis.docx -f latex -t docx MyFinalThesis.tex

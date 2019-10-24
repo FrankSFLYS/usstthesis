@@ -1,10 +1,8 @@
 # 上海理工大学本科毕业设计(论文) LaTeX 文档类
 
-[![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()  [![Version](https://img.shields.io/badge/version-2.9979-yellow.svg)]()
+[![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()  [![Version](https://img.shields.io/badge/version-2.99792-yellow.svg)]()
 
 **作者：[MkSwQi](http://frank.xin)**
-
-[![Fork me on Gitee](https://gitee.com/MkSwQi/usstthesis/widgets/widget_6.svg)  ](https://gitee.com/MkSwQi/usstthesis) 
 
 ## 注意事项
 
@@ -23,7 +21,7 @@
 -   [引言](#引言)
     -   [Windows 平台](#windows-平台)
     -   [Linux 平台](#linux-平台)
-    -   [Overleaf 在线平台](#Overleaf-在线平台)
+    -   [Overleaf 在线平台](#overleaf-在线平台)
 -   [已知问题](#已知问题)
 -   [更多](#更多)
 -   [使用方法（USAGE.md）](USAGE.md)
@@ -44,10 +42,10 @@
 
 2. 显然，所有的 `ttf` 字体文件一定要在根目录下，并且需要与 `usstthesis.cls` 中声明的文件名相同，否则编译不通过，由于包含了字体的项目压缩包下载较慢，你可以到 [usstthesis-v2.9979.zip](https://www.lanzous.com/b689722/) 下载，密码 `24qa`；
 
-3. `demo.tex` 是毕业论文的 LaTeX 主文件，如果使用 TeXworks 等编辑器，请将编译引擎切换到 `XeLaTeX`，或在命令行中使用
+3. `main.tex` 是毕业论文的 LaTeX 主文件，如果使用 TeXworks 等编辑器，请将编译引擎切换到 `XeLaTeX`，或在命令行中使用
 
    ```
-   xelatex demo.tex
+   xelatex main.tex
    ```
 
    编译此文件，主文件中可以使用 `\include{}` 包含其他 `tex` 文件，具体用法可以参考 [USAGE.md](USAGE.md)。注意文件名和路径不能含有中文或者特殊符号等非 ASCII 字符，否则编译可能出错；
@@ -166,7 +164,7 @@ xelatex demo
 
 在主界面（或个人项目列表）点击 `New Project`（创建新项目），点击列表最下方的 `View All`（预览所有），在 Templates 页面的搜索框中输入 usstthesis 后搜索，第一项 `usstthesis-2.9979` 即为本项目的模板，打开后点击 `Open as Template`，等待打开即可。
 
-其中，要编译的主文件 `demo.tex` 一般只负责文件的引用和组织，主要的内容在 `chapter` 和 `element` 文件夹中的 `tex` 文件中编辑，内容编辑方面请参考[使用方法](USAGE.md)。
+其中，要编译的主文件 `main.tex` 一般只负责文件的引用和组织，主要的内容在 `chapter` 和 `element` 文件夹中的 `tex` 文件中编辑，内容编辑方面请参考[使用方法](USAGE.md)。
 
 ### 下方内容适用于无法找到模板的情况
 首先下载 [项目压缩文件](https://www.lanzous.com/b689722/)，密码 `24qa`，请下载“usstthesis-2.9979-含字体包.zip”，之后在 Overleaf 网页中点击 `New Project`（创建新项目），选择 `Upload Project`（上传项目），在弹出的窗口中拖入刚才下载的压缩文件，等待上传并处理完成后就会自动跳转到编辑界面。
@@ -181,7 +179,7 @@ xelatex demo
 
 # 更多
 
-​关于文档的更多用法，可以参阅 `demo.tex` 及其附加内容，也可以在其之上修改，直接生成你的文档。本文档类仅在 Windows 平台和 Linux 平台的 TeXLive 测试通过，其中，Linux 需要安装有 Times New Roman 字体集。
+​关于文档的更多用法，可以查看 `main.tex` 及其附加内容，也可以在其之上修改，直接生成你的文档。本文档类仅在 Windows 平台和 Linux 平台的 TeXLive 测试通过，其中，Linux 需要安装有 Times New Roman 字体集。
 
 ​包附带的三种字体使用方法分别为：华文中宋加粗：`{\bZhongsong 华文中宋粗体}`，华文中宋正体：`{\Zhongsong 华文中宋}`，宋体加粗：`{\bSong 宋体粗体}`，楷体加粗：`{\bKai 楷体粗体}`。**注意：** 如果要加粗的字体中同时有中英文，还需要再加上 `\bfseries`，此时编译会报字体警告，可以忽略。
 

@@ -5,7 +5,7 @@ mkdir element
 mkdir figure
 mkdir listing
 cd ..
-cp demo.tex MyThesis/MyThesis.tex
+cp main.tex MyThesis/MyThesis.tex
 cp *.ttf MyThesis/
 cp element/* MyThesis/element/
 cp README.md MyThesis/
