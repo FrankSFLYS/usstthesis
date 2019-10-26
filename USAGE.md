@@ -48,7 +48,7 @@
 > 致谢 
 > 附录 
 
-​更详细的格式要求参见 main.pdf。使用时，前序固定内容部分使用 `\includefrontmatter` 命令可以直接输出，无需另外编辑，后续内容像书写普通 LaTeX 文档一样，例如，一个完整的、包括各个内容的主文件 `demo.tex` 如下所示：
+​更详细的格式要求参见 main.pdf。使用时，前序固定内容部分使用 `\includefrontmatter` 命令可以直接输出，无需另外编辑，后续内容像书写普通 LaTeX 文档一样，例如，一个完整的、包括各个内容的主文件 `main.tex` 如下所示：
 
 ```latex
 \documentclass{usstthesis}	% 使用 usstthesis 文档类
@@ -197,10 +197,10 @@
 
 # 关于盲审和查重
 
-​盲审和查重时要求将正文以外的内容去掉，而且最好使用 docx 格式，所以你可以下载 [pandoc](<https://pandoc.org/installing.html>)，然后在主文件（此处是 `demo.tex` ）中搜索“盲审”，按要求将指定的行注释掉，然后在命令行中使用 `pandoc` ：
+​盲审和查重时要求将正文以外的内容去掉，而且最好使用 docx 格式，所以你可以下载 [pandoc](<https://pandoc.org/installing.html>)，然后在主文件（此处是 `main.tex` ）中搜索“盲审”，按要求将指定的行注释掉，然后在命令行中使用 `pandoc` ：
 
 ```powershell
-pandoc -o outputfilename.docx -f latex -t docx demo.tex
+pandoc -o outputfilename.docx -f latex -t docx main.tex
 ```
 
 即将 `main.tex` 转换为 `outputfilename.docx` 的 doc 文件，虽然转换之后格式没了，但是所有文字都可复制（使用 pdf 可能会出现查重时乱码的情况）。
