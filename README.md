@@ -65,7 +65,7 @@
 1. 使用 `git clone` 或者直接下载本项目之后，建议首先在你的电脑上试运行一下，首先解压项目文件，然后在目录中打开终端（不推荐使用 cmd，推荐 Windows Powershell，在文件夹中按住 `Shift` 并右键，然后点击“在此处打开 Powershell 窗口(`S`)”，即可打开 Windows Powershell 窗口，如果你已经正确安装和配置了 LaTeX（否则请搜索或查阅相关资料），在窗口中输入以下内容并且回车。
 
 ```powershell
-xelatex demo
+xelatex main
 ```
 
 2. 如果顺利编译并且生成了 `main.pdf`，证明你的环境没问题，可以进行第 4 步，否则请参阅第 3 步。
@@ -113,7 +113,7 @@ xelatex demo
 1. 使用 `git clone` 或下载本项目之后解压到一个目录，然后在终端中进入目录文件夹，然后在终端中输入以下内容并回车，测试是否可以正确编译 LaTeX。
 
    ```shell
-   xelatex demo
+   xelatex main
    ```
 
 2. 如果编译成功，说明可以正常使用，继续第 4 步，否则请看第 3 步。
