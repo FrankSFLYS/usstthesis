@@ -18,12 +18,12 @@
 \documentclass{usstthesis}
 ```
 
-即可。使用 `xelatex thesis` 即可编译（为了正确生成交叉引用，可能需要编译 2~3 次），仅在 `xelatex` 下测试通过。如果是 TeXworks 等编辑器，需要手动将编译引擎切换至 `xelatex`。
+即可。使用 `xelatex main` 即可编译（为了正确生成交叉引用，可能需要编译 2~3 次），仅在 `XeLaTeX` 下测试通过。如果是 TeXworks 等编辑器，需要手动将编译引擎切换至 `XeLaTeX`。
 
 常用的环境（图片、表格、代码块）都已经设置好了，一般无需使用 `\usepackage{}` 载入。阅读以下的内容了解详细的使用方法。
 
 ## 文档类提供的额外功能
-​文档类提供了一些额外的宏和命令，可以有助于文档的写作，它们有：
+文档类提供了一些额外的宏和命令，可以有助于文档的写作，它们有：
 
 |命令|功能|
 |:---|:---|
@@ -35,7 +35,7 @@
 |`\includefrontmatter`|输出文档前序固定内容，下文有具体介绍|
 # 文档结构
 
-​根据“上海理工大学本科毕业设计(论文)撰写规范及样本”设计了相应的 LaTeX 版本，文档结构与样本中给出的类似，包括：
+根据“上海理工大学本科毕业设计(论文)撰写规范及样本”设计了相应的 LaTeX 版本，文档结构与样本中给出的类似，包括：
 
 ### 文档前序固定内容
 > 封面 
@@ -48,7 +48,7 @@
 > 致谢 
 > 附录 
 
-​更详细的格式要求参见 main.pdf。使用时，前序固定内容部分使用 `\includefrontmatter` 命令可以直接输出，无需另外编辑，后续内容像书写普通 LaTeX 文档一样，例如，一个完整的、包括各个内容的主文件 `main.tex` 如下所示：
+更详细的格式要求参见 main.pdf。使用时，前序固定内容部分使用 `\includefrontmatter` 命令可以直接输出，无需另外编辑，后续内容像书写普通 LaTeX 文档一样，例如，一个完整的、包括各个内容的主文件 `main.tex` 如下所示：
 
 ```latex
 \documentclass{usstthesis}	% 使用 usstthesis 文档类
@@ -87,7 +87,7 @@
 \end{document} % 文档结束
 ```
 
-​其中，`citelist` 环境是封装了的 `thebibliography`，使用方法与 `thebibliography`相同，并且可以自动将“参考文献”添加到目录中。另外，为了主体结构清晰，将摘要和 ABSTRACT 放在了 `element/abstract.tex` 中，`abstract.tex`的内容如下。**请注意，不要在 `\abstractcn`、`\keywordscn`、`\abstracten` 和 `\keywordsen` 之前回车添加空行（可以使用注释符号 `%` 将空行注释掉），否则编译时会报 “No lines here to end” 错误。**
+其中，`citelist` 环境是封装了的 `thebibliography`，使用方法与 `thebibliography`相同，并且可以自动将“参考文献”添加到目录中。另外，为了主体结构清晰，将摘要和 ABSTRACT 放在了 `element/abstract.tex` 中，`abstract.tex`的内容如下。**请注意，不要在 `\abstractcn`、`\keywordscn`、`\abstracten` 和 `\keywordsen` 之前回车添加空行（可以使用注释符号 `%` 将空行注释掉），否则编译时会报 “No lines here to end” 错误。**
 
 ```latex
 % 中文摘要
@@ -103,14 +103,14 @@
 \keywordsen Keywords 1\quad{}Keywords 2\quad{}Keywords 3
 ```
 
-​同时也建议，在文档主体中不直接写内容，而是使用 `\include{<filename>}`命令（注意，不需要添加文件后缀 `.tex`），将文档按照章节分开每个文件，如果以后有不需要输出某些章的需求，可以在导言区使用 `\includeonly{<file1>,<file2>}` 使其只编译 file1 和 file2。例如：
+同时也建议，在文档主体中不直接写内容，而是使用 `\include{<filename>}`命令（注意，不需要添加文件后缀 `.tex`），将文档按照章节分开每个文件，如果以后有不需要输出某些章的需求，可以在导言区使用 `\includeonly{<file1>,<file2>}` 使其只编译 file1 和 file2。例如：
 
 ``` latex
 \include{chapter/chap1}
 \include{chapter/chap2}
 ```
 
-​其中，`chap*.tex` 中不应该包含 `\begin{document} ` 和 `\end{document}`，而应该直接写正文内容，例如：
+其中，`chap*.tex` 中不应该包含 `\begin{document} ` 和 `\end{document}`，而应该直接写正文内容，例如：
 
 ```latex
 % chapter/chap1.tex
@@ -119,11 +119,11 @@
 \par Paragraph.
 ```
 
-​另外，实际使用时建议不要将章节命名为 `chapter1.tex` 等，而是按照其内容命名。
+另外，实际使用时建议不要将章节命名为 `chapter1.tex` 等，而是按照其内容命名。
 
 # 图片、表格和代码块
 
-​本文档类提供了 `\figureCapSet` 和 `\tableCapSet`，用于调节 caption 和图片、表格的间距，其使用方法如下。
+本文档类提供了 `\figureCapSet` 和 `\tableCapSet`，用于调节 caption 和图片、表格的间距，其使用方法如下。
 
 ## 图片
 
@@ -167,7 +167,7 @@
 
 ## 代码
 
-​为了方便编译和视觉效果的统一，文档使用 `listings` 宏包插入代码。可以在导言区设置使用的语言，例如使用 C 语言：`\lstset{language=C}`，使用时也可以进行设置，具体用法请参考 `listings` 宏包文档 [listings.pdf](http://mirrors.ctan.org/macros/latex/contrib/listings/listings.pdf)。其基本使用方法如下：
+为了方便编译和视觉效果的统一，文档使用 `listings` 宏包插入代码。可以在导言区设置使用的语言，例如使用 C 语言：`\lstset{language=C}`，使用时也可以进行设置，具体用法请参考 `listings` 宏包文档 [listings.pdf](http://mirrors.ctan.org/macros/latex/contrib/listings/listings.pdf)。其基本使用方法如下：
 1. 行内代码，使用 `\lstinline|内容|`（注意在命令的前后插入空格，否则在中文环境中它会和文字连在一起），使用方法和 `\verbatim|内容|` 类似，两个竖线作为和普通文本的分界符，可以替换为其他字符，但是前后一定要相同，例如可以替换为 `\lstinline[内容[`；
 
 2. 代码段，直接在文中插入时，使用 `code` 环境和 `lstlisting` 环境（`code` 环境可以避免 `lstlisting` 环境不闭合，而导致后面段落无首行缩进的问题），并且使用 `\captionof{lstlisting}{标题内容}` 插入标题，例如：
@@ -189,15 +189,15 @@
 
 # 参考文献
 
-​文档使用默认的参考文献处理方式（使用了 `cite` 宏包），建议将参考文献的内容单独放在 `element/citation.tex` 中，在文中使用 `\include{element/citation}` 包含。参考文献的格式可以参考文件内容，主流的学术搜索网站可以直接生成参考文献内容，复制到 `citation.tex` 中的 `\bibitem{}` 条目中即可。
+文档使用默认的参考文献处理方式（使用了 `cite` 宏包），建议将参考文献的内容单独放在 `element/citation.tex` 中，在文中使用 `\include{element/citation}` 包含。参考文献的格式可以参考文件内容，主流的学术搜索网站可以直接生成参考文献内容，复制到 `citation.tex` 中的 `\bibitem{}` 条目中即可。
 
 # 致谢
 
-​致谢的内容请在 `element/thanking.tex` 中编辑，并且在正文中使用 `\include{element/thanking}` 导入。
+致谢的内容请在 `element/thanking.tex` 中编辑，并且在正文中使用 `\include{element/thanking}` 导入。
 
 # 关于盲审和查重
 
-​盲审和查重时要求将正文以外的内容去掉，而且最好使用 docx 格式，所以你可以下载 [pandoc](<https://pandoc.org/installing.html>)，然后在主文件（此处是 `main.tex` ）中搜索“盲审”，按要求将指定的行注释掉，然后在命令行中使用 `pandoc` ：
+盲审和查重时要求将正文以外的内容去掉，而且最好使用 docx 格式，所以你可以下载 [pandoc](<https://pandoc.org/installing.html>)，然后在主文件（此处是 `main.tex` ）中搜索“盲审”，按要求将指定的行注释掉，然后在命令行中使用 `pandoc` ：
 
 ```powershell
 pandoc -o outputfilename.docx -f latex -t docx main.tex
@@ -210,7 +210,7 @@ pandoc -o outputfilename.docx -f latex -t docx main.tex
 阅读 pandoc 的说明时发现，它可以指定一个 docx 文件作为模板，生成的文档将会使用指定文件的模板。因此可以将学校的模板作为模板直接生成，省去了很多调整格式的麻烦。本项目中已经包含了模板文件 `ref.docx`，在命令行中使用
 
 ```powershell
-pandoc --reference-doc ref.docx -o DocThesis.docx -f latex -t docx MyFinalThesis.tex
+pandoc --reference-doc ref.docx -o MyThesis.docx -f latex -t docx main.tex
 ```
 
 就可以直接生成指定模板的文件了，但是有一些格式还需要手动调整。（其实盲审和查重时对格式的要求没有那么高，只需要看起来类似就可以了，这是我的经验）。
