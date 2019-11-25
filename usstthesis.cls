@@ -14,7 +14,7 @@
 \LoadClass[twoside, zihao=-4, openright]{ctexbook} % Based on ctexart, twosided
 
 \RequirePackage{xcolor}
-\colorlet{darkred}{red!15!black}  % 超链接颜色，深蓝色
+\colorlet{darkred}{red!15!black}  % 深红色
 
 \RequirePackage{geometry}   % margin
 
@@ -233,8 +233,8 @@
 
 \RequirePackage[
     colorlinks,
-    linkcolor=darkred,
-    citecolor=darkred]{hyperref}
+    linkcolor=black,
+    citecolor=black]{hyperref}
 
 \def\equationautorefname{式}
 \def\footnoteautorefname{注}
