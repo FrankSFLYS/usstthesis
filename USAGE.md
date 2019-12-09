@@ -25,6 +25,7 @@
 ## 文档类提供的额外功能
 文档类提供了一些额外的宏和命令，可以有助于文档的写作，它们有：
 
+### 概览
 |命令|功能|
 |:---|:---|
 |`\autoref{ref}`|汉化了 autoref 的文字，根据环境自动在引用中加入“表”、“图”等。常用的如 `表 \ref{table:xx}` 可以直接使用 `\autoref{table:xx}` 代替|
@@ -33,6 +34,72 @@
 |`\dif` `\difx` `\dify`|公式环境中使用，分别用于生成直立的微分算子 $\mathrm{d}$、$\mathrm{d}x$、$\mathrm{d}y$（注意，微分算子不要直接使用 `dx`，否则其中的 d 会变成变量的斜体 $dx$，建议使用 `\mathrm{d}x` 或者 `\dif x`，可以得到 $\mathrm{d}x$，更加规范|
 |`\tableCapSet` `\figureCapSet` `\codeCapSet`|分别用于调节表格、图、代码标题（caption）和其内容的距离，其中 `\codeCapSet` 已嵌入 `code` 环境，无需显式使用|
 |`\includefrontmatter`|输出文档前序固定内容，下文有具体介绍|
+### 用法
+
+#### `autoref`、`chapref`、`secref` 和 `subsecref`
+
+它们用于在文中引用其他段落、章节、图表，当我们需要写“见第 X 章第 1 节”这样的内容时，借助这几个命令可以方便实现，看例子：
+
+```latex
+\chapter{引言}\label{chap:intro} % \label{} 用于标记被引用的内容
+\section{背景介绍}\label{intro:sec:back}
+\subsection{\LaTeX{} 介绍}\label{intro:back:subsec:latex}
+\LaTeX{} 是一个很好用的文档准备系统，它的功能如\autoref{figure:latex}所示。 % 这里 \autoref{} 引用了标记为 figure:latex 的图片
+\begin{figure}[htb]
+    \figureCapSet % 使用此命令调整 figure 的 caption 间距
+    \centering
+    \includegraphic{somegraph.png}
+    \caption{\LaTeX{} 的功能}
+    \label{figure:latex} % 这里将 somegraph.png 这张图标记为 figure:latex，在上面引用了
+\end{figure}
+
+与其他软件相比，它的优缺点如\autoref{table:compare}所示。
+\begin{table}[htb]
+    \tableCapSet    % 使用此命令调整 table 的 caption 间距
+    \caption{排版软件的优缺点对比}
+    \label{table:compare} % 将此表格标记为 table:compare，上面引用时使用
+    \centering
+    \zihao{5}
+    \begin{tabular}{c|c|c}
+        \hlineB{3}  % 线宽为3倍的横线
+        软件      & 优点 & 缺点           \\
+        \hlineB{2}  % 线宽为2倍的横线
+        \LaTeX{} & 优美 & 无法直接看到结果 \\
+        \hline
+        MS Word     & 直观 & 不够专业 \\
+        \hlineB{3}
+    \end{tabular}
+\end{table}
+
+% ....
+\chapter{实现}
+\section{准备工作}
+\chapref{chap:intro}\secref{intro:sec:back}\subsecref{intro:back:subsec:latex}介绍了 \LaTeX{}…… % 这里用引用了前面标记的各种内容，最后显示出来就是“第一章第1节第1.1小节”
+```
+
+上面的例子中，`\label{chap:intro}` 中的 `chap:intro` 是可以随意写的，只要引用的时候与之对应即可，不过使用 `chap:`、`figure:`、`table:` 可以防止太多的引用名称混淆。
+
+其中也介绍了 `tableCapSet` 和 `figureCapSet` 的用法，插入图片、表格时使用类似上面的结构，复制粘贴即可。
+
+#### `dif` 、`difx` 和 `dify`
+
+这三个命令仅用于数学环境中。微分算子 d 与普通变量不同，使用的是直立体，所以需要特殊对待，例：
+
+```latex
+\[
+\int_c^d\difx\int_a^b e^{xy}\dify
+\]
+\[
+\dif t = a\dif\alpha - \frac 1b \dif\beta
+\]
+```
+
+效果： 
+
+![公式 1](http://chart.googleapis.com/chart?cht=tx&chl=\Large\int_c^d\mathrm{d}x\int_a^be^{xy}\mathrm{d}y )
+
+![公式 2](http://chart.googleapis.com/chart?cht=tx&chl=\Large\mathrm{d}t=u\mathrm{d}\alpha-\frac1v\mathrm{d}\beta)
+
 # 文档结构
 
 根据“上海理工大学本科毕业设计(论文)撰写规范及样本”设计了相应的 LaTeX 版本，文档结构与样本中给出的类似，包括：
