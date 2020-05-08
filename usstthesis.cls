@@ -71,9 +71,9 @@
 }
 \setmainfont{Times New Roman}                   % 英文字体
 \IfFileExists{STSong.ttf}{%
-    \setCJKmainfont[AutoFakeBold=1]{STSong.ttf} % 使用华文宋体 ttf 文件
+    \setCJKmainfont[AutoFakeBold=2.6]{STSong.ttf} % 使用华文宋体 ttf 文件
 }{%
-    \setCJKmainfont[AutoFakeBold=1]{STSong}     % 使用系统华文宋体
+    \setCJKmainfont[AutoFakeBold=2.6]{STSong}     % 使用系统华文宋体
 }
 
 \ctexset {
