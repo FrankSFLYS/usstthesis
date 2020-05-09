@@ -1,4 +1,4 @@
-#! /usr/bin/sh
+#! /bin/sh
 mkdir MyThesis
 cd MyThesis
 mkdir chapter

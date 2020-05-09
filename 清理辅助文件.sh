@@ -1,4 +1,4 @@
-#! /usr/bin/sh
+#! /bin/sh
 rm *.aux
 rm ./chapter/*.aux
 rm ./element/*.aux
