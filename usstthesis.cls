@@ -4,11 +4,11 @@
 %% Author: frank.xin
 %% This file is for USST undergraduated
 %% thesis.
-%% 上海理工大学毕业论文 LaTeX 2e 文档类
+%% 上海理工大学毕业论文 LaTeX 2e 模板
 %% c = 299792458 m/s
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{usstthesis}
-    [2019/01/01 v2.99792 USST Thesis class]
+    [2019/01/01 v2.99792 USST Thesis template]
 \typeout{USST Thesis}
 
 \LoadClass[twoside, zihao=-4, openright]{ctexbook} % Based on ctexart, twosided
@@ -48,13 +48,6 @@
 
 \providecommand{\usstthesisset}[1]{\setkeys{usstthesis}{#1}}
 \RequirePackage{xeCJK}
-% \begingroup\newif\ifmy
-% \IfFileExists{\jobname.txt}{}{\mytrue}
-% \ifmy
-% \begin{filecontents}{\jobname.txt}
-%   Hello World
-% \end{filecontents}
-% \fi\endgroup
 \IfFileExists{STZhongsong.ttf}{%
     \newCJKfontfamily\Zhongsong{STZhongsong.ttf}[AutoFakeBold=4] % 使用华文中宋 ttf 文件
     \newCJKfontfamily\ZhongsongNormal{STZhongsong.ttf}[AutoFakeBold=false] % 普通粗细的华文中宋
@@ -157,6 +150,7 @@
 
 \setcounter{secnumdepth}{3}  % 编号的深度, 3 表示到 subsubsection
 \setcounter{tocdepth}{2}     % 目录的深度，2 表示到 subsection
+\setlength{\@fptop}{0pt}
 
 \RequirePackage{amsmath}    % \numberwithin{}{}
 \numberwithin{equation}{chapter}    % 公式编号以 *.* 为格式
