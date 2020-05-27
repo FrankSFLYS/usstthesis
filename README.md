@@ -1,16 +1,16 @@
 # 上海理工大学本科毕业设计(论文) LaTeX 模板
 
-[![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()  [![Version](https://img.shields.io/badge/version-2.99792-yellow.svg)]()
+[![Apache License](https://img.shields.io/badge/LICENSE-Apache-orange.svg)]()  [![Version](https://img.shields.io/badge/version-2.997924-yellow.svg)]()
 
 **作者：[MkSwQi](http://frank.xin)**
 
-[download link]: https://www.lanzous.com/b0e7d3hgb "usstthesis-2.99792-含字体包.zip"
+[download link]: https://www.lanzous.com/b0e7d3hgb "usstthesis-2.997924-含字体包.zip"
 
 ## 注意事项
 
 学校并未规定使用（或不使用）LaTeX 进行论文写作，并且本模板中部分格式暂无法做到与学校给出的 Word 版本完全相同，所以使用本模板类造成（包括但不限于）论文审核不通过等问题作者不负责，请使用时慎酌（**定心丸**：作者已经使用此模板并且通过了毕业论文答辩，而且没有老师看出有任何格式方面的瑕疵）。
 
-部分系统（如 Ubuntu 等）未附带宋体或 Times New Roman 字体，需要使用者自行下载安装。
+部分系统（如 Ubuntu 等）未附带宋体或 Times New Roman 字体，需要使用者自行下载安装。下载地址：[蓝奏云][download link]（字体包.zip），密码：`fnnv`。
 
 文件中的 `resource/egf.png` 来自“上海理工大学本科毕业设计(论文)撰写规范及样本.docx”， `resource/usst-text-cnen.pdf` 来自“上海理工大学视觉校园视觉形象识别系统（VIS）”（访问地址：[校园视觉形象识别系统](http://www.usst.edu.cn/2018/0301/c199a21804/page.htm)），图片版权归上海理工大学所有。
 
@@ -20,13 +20,17 @@
     模板](#上海理工大学本科毕业设计论文-latex-模板)
     -   [注意事项](#注意事项)
     -   [目录](#目录)
--   [引言](#引言)
-    -   [Windows 平台](#windows-平台)
-    -   [Linux 平台](#linux-平台)
-    -   [Overleaf 在线平台](#overleaf-在线平台)
--   [已知问题](#已知问题)
--   [更多](#更多)
--   [使用方法（USAGE.md）](USAGE.md)
+- [上海理工大学本科毕业设计(论文) LaTeX 模板](#上海理工大学本科毕业设计论文-latex-模板)
+  - [注意事项](#注意事项)
+  - [目录](#目录)
+- [引言](#引言)
+  - [Windows 平台](#windows-平台)
+  - [Linux 平台](#linux-平台)
+  - [Overleaf 在线平台](#overleaf-在线平台)
+    - [下方内容适用于在 Overleaf 中无法搜索到模板的情况](#下方内容适用于在-overleaf-中无法搜索到模板的情况)
+- [已知问题](#已知问题)
+- [更多](#更多)
+- [使用方法](#使用方法)
 
 # 引言
 
@@ -175,10 +179,9 @@ xelatex main
 
 # 已知问题
 
-1. 由于直接使用了加粗的字体文件，编译时可能出现很多字体的警告，这是由于本模板的缺陷造成的，暂时无法解决，编译时请注意甄别；
-2. 因为调整间距时产生了未知问题，最终的 section 无法与模板完全一致，但是差别较小可以忽略；
-3. 使用 `subfigure` 时可能会出现无法编译的情况，请根据注释在 `usstthesis.cls` 中将 `RequirePackage{subfigure}` 相关行注释掉再编译；
-4. 未进行极限情况的测试，例如目录超过 2 页、标题字数太多等情况，如果你在使用时出现了问题，可以提交 issue，我会在之后进行更新修复。
+1. 因为调整间距时产生了未知问题，最终的 section 无法与模板完全一致，但是差别较小可以忽略；
+2. 使用 `subfigure` 时可能会出现无法编译的情况，请根据注释在 `usstthesis.cls` 中将 `RequirePackage{subfigure}` 相关行注释掉再编译；
+3. 未进行极限情况的测试，例如目录超过 2 页、标题字数太多等情况，如果你在使用时出现了问题，可以提交 issue，我会在之后进行更新修复。
 
 # 更多
 

@@ -1,38 +1,29 @@
 %% This is file "usstthesis.cls".
 %% !Mode:: "TeX:UTF-8"
 %% -----------------------------
-%% Author: frank.xin
+%% Author: https://frank.xin
 %% This file is for USST undergraduated
 %% thesis.
 %% 上海理工大学毕业论文 LaTeX 2e 模板
 %% c = 299792458 m/s
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{usstthesis}
-    [2019/01/01 v2.99792 USST Thesis template]
-\typeout{USST Thesis}
+    [2019/01/01 v2.997924 USST Thesis template]
+\typeout{USST Thesis - 上海理工大学本科毕业论文模板 - frank.xin}
 
-\LoadClass[twoside, zihao=-4, openright]{ctexbook} % Based on ctexart, twosided
+\LoadClass[twoside, zihao=-4, openright]{ctexbook} % 基于 ctexbook，双面右开
 
-\RequirePackage{xcolor}
+\RequirePackage{xcolor} % 用于定义颜色
 \colorlet{darkred}{red!15!black}  % 深红色
 
-\RequirePackage{geometry}   % margin
+\RequirePackage{geometry}   % 修改页面布局
 
 \geometry{a4paper, top=2.5cm, bottom=2.5cm, inner=3cm, outer=2.5cm}
+% A4 大小，上下边距 2.5cm，内边距 3cm，外边距 2.5cm
 
-\RequirePackage{xkeyval}    % key-val sets
+\RequirePackage{xkeyval}    % 键值对设置（使用 \setkeys{} 设置文档内容）
 
 \define@cmdkeys{usstthesis}[usstthesis@]{session, title, longtitle, titleen, institute, major, name, number, mentor, date}[none]
-\define@key{usstthesis}{session}[某]{\gdef\usstthesis@session{#1}}
-\define@key{usstthesis}{title}[你还未设置论文短题目]{\gdef\usstthesis@title{#1}}
-\define@key{usstthesis}{longtitle}[你还未设置论文长题目]{\gdef\usstthesis@longtitle{#1}}
-\define@key{usstthesis}{titleen}[You have not yet set your English title]{\gdef\usstthesis@titleen{#1}}
-\define@key{usstthesis}{institute}[你还未设置学院]{\gdef\usstthesis@institute{#1}}
-\define@key{usstthesis}{major}[你还未设置专业]{\gdef\usstthesis@major{#1}}
-\define@key{usstthesis}{name}[你的名字]{\gdef\usstthesis@name{#1}}
-\define@key{usstthesis}{number}[0000000000]{\gdef\usstthesis@number{#1}}
-\define@key{usstthesis}{mentor}[你的导师]{\gdef\usstthesis@mentor{#1}}
-\define@key{usstthesis}{date}[2019年1月1日]{\gdef\usstthesis@date{#1}}
 \setkeys{usstthesis}{
     session=某,   % 届
     title=你还未设置论文题目,   % 论文题目
@@ -47,29 +38,29 @@
 }
 
 \providecommand{\usstthesisset}[1]{\setkeys{usstthesis}{#1}}
-\RequirePackage{xeCJK}
-\IfFileExists{STZhongsong.ttf}{%
+\RequirePackage{xeCJK} % 切换字体
+\IfFileExists{STZhongsong.ttf}{% 如果目录下有 STZhongsong.ttf
     \newCJKfontfamily\Zhongsong{STZhongsong.ttf}[AutoFakeBold=4] % 使用华文中宋 ttf 文件
     \newCJKfontfamily\ZhongsongNormal{STZhongsong.ttf}[AutoFakeBold=false] % 普通粗细的华文中宋
-}{%
+}{% 目录下没有，尝试使用系统字体
     \newCJKfontfamily\Zhongsong{STZhongsong}[AutoFakeBold=4] % 使用系统华文中宋
     \newCJKfontfamily\ZhongsongNormal{STZhongsong}[AutoFakeBold=false] % 普通粗细的华文中宋
 }
-\IfFileExists{STKaiti.ttf}{%
+\IfFileExists{STKaiti.ttf}{% 如果目录下有 STKaiti.ttf
     \newCJKfontfamily\Kaiti{STKaiti.ttf}[AutoFakeBold=2]     % 使用华文楷体 ttf 文件
     \newfontfamily\bKaiA{STKaiti.ttf}[AutoFakeBold=2]        % 英文楷体
-}{%
+}{% 目录下没有，尝试使用系统字体
     \newCJKfontfamily\Kaiti{STKaiti}[AutoFakeBold=2]         % 使用系统华文楷体
     \newfontfamily\bKaiA{STKaiti}[AutoFakeBold=2]            % 英文楷体
 }
-\setmainfont{Times New Roman}                   % 英文字体
-\IfFileExists{STSong.ttf}{%
+\setmainfont{Times New Roman} % 英文字体使用 Times
+\IfFileExists{STSong.ttf}{% 如果目录下有 STSong.ttf
     \setCJKmainfont[AutoFakeBold=2.6]{STSong.ttf} % 使用华文宋体 ttf 文件
-}{%
+}{% 目录下没有，尝试使用系统字体
     \setCJKmainfont[AutoFakeBold=2.6]{STSong}     % 使用系统华文宋体
 }
 
-\ctexset {
+\ctexset { % 设置文档样式
     contentsname = 目\quad 录,
     chapter = {
         number = \arabic{chapter},
@@ -110,9 +101,8 @@
 % issue:#1，遇到与 subfig、subfloat 宏包冲突时，请将下面两行中的 subfigure 注释掉
 \RequirePackage{subfigure}
 \RequirePackage[subfigure]{tocloft}    % 目录格式定制
-%\renewcommand{\cftdot}{$\ldots$}    % 使用密集的小点
-\renewcommand{\cfttoctitlefont}{\hfill\Zhongsong\bfseries\zihao{3}}
-\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cfttoctitlefont}{\hfill\Zhongsong\bfseries\zihao{3}} % “目录”字体
+\renewcommand{\cftaftertoctitle}{\hfill} % 上一行和此行的 \hfill 使“目录”居中
 \renewcommand{\cftdotsep}{0.1}      % 点间距
 \setlength{\cftbeforechapskip}{6pt}
 \setlength{\cftbeforesecskip}{0pt}
@@ -126,7 +116,7 @@
 \renewcommand{\cftsubsecfont}{\zihao{-4}}
 \renewcommand{\cftchapleader}{\bfseries\cftdotfill{\cftchapdotsep}}
 \renewcommand{\cftchapdotsep}{\cftdotsep}
-\renewcommand{\numberline}[1]{%
+\renewcommand{\numberline}[1]{% 目录中数字所占宽度
 \settowidth\@tempdimb{#1\hspace{0.5em}}%
 \ifdim\@tempdima<\@tempdimb%
   \@tempdima=\@tempdimb%
@@ -150,20 +140,20 @@
 
 \setcounter{secnumdepth}{3}  % 编号的深度, 3 表示到 subsubsection
 \setcounter{tocdepth}{2}     % 目录的深度，2 表示到 subsection
-\setlength{\@fptop}{0pt}
+\setlength{\@fptop}{0pt}     % fixed #7：图片在单独页时置顶而非居中
 
 \RequirePackage{amsmath}    % \numberwithin{}{}
-\numberwithin{equation}{chapter}    % 公式编号以 *.* 为格式
-\numberwithin{table}{chapter}
+\numberwithin{equation}{chapter} % 公式编号以 *.* 为格式
+\numberwithin{table}{chapter}    % 表格按章编号 
 \providecommand*{\dif}{\ensuremath{\mathop{}\!\mathrm{d}}} % 微分算子 d
 \providecommand*{\difx}{\ensuremath{\dif x}} % dx
 \providecommand*{\dify}{\ensuremath{\dif y}} % dy
 
-\RequirePackage{tabularx}
+\RequirePackage{tabularx}   % 表格
 \RequirePackage{booktabs}   % 三线表 \toprule \midrule \bottomrule
 \RequirePackage{boldline}   % \hlineB{num} \clineB{c1-c2}{num}
 
-\RequirePackage{caption}    % \captionsetup
+\RequirePackage{caption}    % 其他环境中的 caption
 \DeclareCaptionFont{wuhao}{\zihao{5}}
 \captionsetup {
     labelsep=quad,
@@ -191,39 +181,35 @@
 \colorlet{codeyellow}{yellow!15!blue!50!black}
 \colorlet{codegray}{red!50!green!50!blue}
 \colorlet{codemauve}{red!60!blue!40!black}
-% \makeatletter
-\lstdefinestyle{mystyle}{
+\lstdefinestyle{mystyle}{ %
   basicstyle=%
     \ttfamily%
     \lst@ifdisplaystyle\scriptsize\fi
 }
-% \makeatother
 \lstset{ %
-	backgroundcolor=\color{white},   % choose the background color
-	style=mystyle,        % size of fonts used for the code
-	columns=fullflexible,
-	breaklines=true,                 % automatic line breaking only at 
-	%whitespace
-	captionpos=t,                    % sets the caption-position to bottom
-	tabsize=4,
-	commentstyle=\color{codegreen},    % comment style
-	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-    keywordstyle=\color{codeblue},       % keyword style
-    keywordstyle=[2]\color{codered},
-    keywordstyle=[3]\color{codeyellow},
-	stringstyle=\color{codemauve}\ttfamily,     % string literal style
-	frame=single,
-	frameround=fttt,
-	rulesepcolor=\color{red!20!green!20!blue!20},
-	% identifierstyle=\color{red},
-	keepspaces=true,
+	backgroundcolor=\color{white},   % 背景颜色
+	style=mystyle,         % 代码风格（字体）
+	columns=fullflexible,  % 设置列对齐策略
+	breaklines=true,       % 自动断行
+	captionpos=t,          % 设置 caption 位置为顶部
+	tabsize=4,             % 自动 tab 为 4 个空格
+	commentstyle=\color{codegreen},  % 注释颜色
+	escapeinside={\%*}{*)},          % 逃逸字符（详见 Listings 文档）
+    keywordstyle=\color{codeblue},   % 关键词风格
+    keywordstyle=[2]\color{codered}, % 关键词风格 2
+    keywordstyle=[3]\color{codeyellow}, % 关键词风格 3
+	stringstyle=\color{codemauve}\ttfamily, % 字符串风格
+	frame=single,    % 框线
+	frameround=fttt, % 框线为右上角直角，其余弧形
+	keepspaces=true, % 保留空格
 }
-\renewcommand{\lstlistingname}{清单}    % 代码环境名称
-\RequirePackage{graphicx}
+\renewcommand{\lstlistingname}{清单} % 代码环境名称
+\RequirePackage{graphicx} % \includegraphics{}
 
-\RequirePackage[super]{cite}
-%\setcitestyle{open={\citeleft},close={\citeright}}
-\renewcommand\citeform[1]{[#1]}
+\RequirePackage[super]{cite} % 引用风格为右上角
+\renewcommand\citeform[1]{[#1]} % 引用风格为方括号
+
+\def\@font@warning#1{} % 消除字体警告
 
 \RequirePackage[
     colorlinks,
@@ -266,7 +252,8 @@
     \end{thebibliography}%
 }
 
-\newenvironment{code}{\codeCapSet}{}
+\newenvironment{code}{ % 代码环境
+\codeCapSet\captionsetup{type=lstlisting}}{}
 
 \RequirePackage[absolute]{textpos}  % textblock
 \RequirePackage{setspace}   % parbox
@@ -274,30 +261,31 @@
 \RequirePackage{etoolbox}   % \patchcmd{}{}{}
 \RequirePackage{afterpage}  % \afterpage
 
-\providecommand{\abstractcn}{
-    \cleardoublepage
+\providecommand{\abstractcn}{ % 中文摘要
+    \cleardoublepage %
     %\gobbletocpage %
-    \addtocontents{toc}{\cftpagenumbersoff{chapter}}
-    \chapter{摘\quad{}要}
-    \thispagestyle{empty}
+    \addtocontents{toc}{\cftpagenumbersoff{chapter}} %
+    \chapter{摘\texorpdfstring{\quad}{}要} % 使用 \texorpdfstring 消除警告信息
+    \thispagestyle{empty} %
     %\restoretocpage %
 }
-\providecommand{\keywordscn}{
-    \afterpage{\thispagestyle{empty}}
-    \\\\\noindent{\bfseries 关键词：}
+\providecommand{\keywordscn}{ %
+    \afterpage{\thispagestyle{empty}} %
+    \par\vspace{\baselineskip}\noindent{\bfseries 关键词：} %
 }
-\providecommand{\abstracten}{
-    \cleardoublepage 
+\providecommand{\abstracten}{%
+    \cleardoublepage %
     %\gobbletocpage %
-    \chapter{ABSTRACT} 
-    \thispagestyle{empty} 
-    \addtocontents{toc}{\cftpagenumberson{chapter}}
+    \chapter{ABSTRACT} %
+    \thispagestyle{empty} %
+    \addtocontents{toc}{\cftpagenumberson{chapter}} %
     %\restoretocpage %
 }
-\providecommand{\keywordsen}{
-    \afterpage{\thispagestyle{empty}}
-    \\\\\noindent{\bfseries KEY WORDS: }
+\providecommand{\keywordsen}{ %
+    \afterpage{\thispagestyle{empty}} %
+    \\\\\noindent{\bfseries KEY WORDS: } %
 }
+\providecommand{\thanking}{\chapter{致\texorpdfstring{\quad}{}谢}}
 \providecommand{\includefrontmatter}{
 \setlength{\TPHorizModule}{1cm}  % textblock horiz length reference
 \setlength{\TPVertModule}{1cm}   % textblock verti length reference

@@ -24,16 +24,18 @@
     
 \mainmatter % 中间内容
 % 可以使用分文件编辑，最后 input 每个章节
+% 使用 \input{xxx.tex} 或者 \include{xxx}（无扩展名）
+% 注意，使用 \include{} 时会强制断页，不需要断页时请使用 \input{}
 % 也可以直接在此文件中编写，但是比较乱
 \include{chapter/chapter1} % 引言
 \include{chapter/chapter2} % 论文的内容要求
 \include{chapter/chapter3} % 论文的格式要求
 \include{chapter/chapter4} % 论文的写作细则
-% 表格、插图等格式要求在 chapter/chapter4.tex 中有所体现
+% 表格、插图等使用方法在 chapter/chapter4.tex 中有所体现
 
 % 盲审时将下面三行注释掉
 \backmatter % 结尾内容
-\include{element/citation}
+\include{element/citation} % 参考文献
 \include{element/thanking} % 致谢
 
 \end{document}
