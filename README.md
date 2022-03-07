@@ -4,15 +4,17 @@
 
 **作者：[MkSwQi](http://frank.xin)**
 
-[download link]: https://www.lanzous.com/b0e7d3hgb "usstthesis-2.997924-含字体包.zip"
+[download link]: https://www.lanzoux.com/b0e7d3hgb "usstthesis-2.997924-含字体包.zip"
 
 ## 注意事项
 
 学校并未规定使用（或不使用）LaTeX 进行论文写作，并且本模板中部分格式暂无法做到与学校给出的 Word 版本完全相同，所以使用本模板类造成（包括但不限于）论文审核不通过等问题作者不负责，请使用时慎酌（**定心丸**：作者已经使用此模板并且通过了毕业论文答辩，而且没有老师看出有任何格式方面的瑕疵）。
 
-部分系统（如 Ubuntu 等）未附带宋体或 Times New Roman 字体，需要使用者自行下载安装。下载地址：[蓝奏云][download link]（字体包.zip），密码：`fnnv`。
-
 文件中的 `resource/egf.png` 来自“上海理工大学本科毕业设计(论文)撰写规范及样本.docx”， `resource/usst-text-cnen.pdf` 来自“上海理工大学视觉校园视觉形象识别系统（VIS）”（访问地址：[校园视觉形象识别系统](http://www.usst.edu.cn/2018/0301/c199a21804/page.htm)），图片版权归上海理工大学所有。
+
+## 字体
+
+部分系统（如 Ubuntu 等）未附带宋体或 Times New Roman 字体，需要使用者自行下载安装。下载地址：[蓝奏云][download link]（字体包.zip），密码：`fnnv`。
 
 ## 目录
 
