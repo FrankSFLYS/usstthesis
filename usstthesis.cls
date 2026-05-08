@@ -34,7 +34,7 @@
     name=你的名字,  % 姓名
     number=0000000000,  % 学号
     mentor=你的导师,    % 指导教师
-    date=2019年1月1日   % 完成日期
+    date=2026年1月1日   % 完成日期
 }
 
 \providecommand{\usstthesisset}[1]{\setkeys{usstthesis}{#1}}
@@ -126,7 +126,7 @@
 \RequirePackage{fancyhdr}   % 页眉页脚
 \fancyhf{}
 \fancyhead[CO]{\zihao{-5}\usstthesis@title}
-\fancyhead[CE]{\zihao{-5}上海理工大学本科毕业设计(论文)}
+\fancyhead[CE]{\zihao{-5}上海理工大学本科毕业论文（设计）}
 \fancyfoot[RO,LE]{\thepage}
 \renewcommand{\headrulewidth}{0.8pt}    % 页眉线粗细
 \setlength{\headheight}{16pt}   % 页眉线与顶端距离
@@ -296,7 +296,7 @@
 \noindent\hspace{0.3cm}\includegraphics[width=6.4cm]{element/usst-text-cnen.pdf}%
 \\[2cm]
 \begin{center}
-    {\bfseries\Kaiti\fontsize{33}{35}\selectfont 本科毕业设计(论文)} \\[0.19cm]
+    {\bfseries\Kaiti\fontsize{33}{35}\selectfont 本科毕业论文（设计）} \\[0.19cm]
     {\bfseries FINAL PROJECT/THESIS OF UNDERGRADUATE}   \\[0.9ex]
     {\bfseries\bKaiA\zihao{3} (\usstthesis@session}{\bfseries\Kaiti\zihao{3} 届}{\bfseries\Kaiti\zihao{3} )}   \\
     \rule{0em}{15.4ex} \\
@@ -306,13 +306,13 @@
     \begin{textblock}{13.2}(3.8,18.5)
         \bfseries\Kaiti\zihao{4}
         \renewcommand\arraystretch{1.3}
-        \begin{tabular}{>{\centering\arraybackslash}p{3.8cm}>{\centering\arraybackslash\ZhongsongNormal}p{7.5cm}}
-        学\hspace{2\ccwd}院 & \usstthesis@institute \\ \clineB{2-2}{2}
-        专\hspace{2\ccwd}业 & \usstthesis@major     \\ \clineB{2-2}{2}
+        \begin{tabular}{>{\centering\arraybackslash\bfseries}p{3.8cm}>{\centering\arraybackslash\bfseries\ZhongsongNormal}p{7.5cm}}
+        学\ \ 院             & \usstthesis@institute \\ \clineB{2-2}{2}
+        专\ \ 业             & \usstthesis@major     \\ \clineB{2-2}{2}
         学生姓名            & \usstthesis@name      \\ \clineB{2-2}{2}
-        学\hspace{2\ccwd}号 & \usstthesis@number    \\ \clineB{2-2}{2}
+        学\ \ 号             & \usstthesis@number    \\ \clineB{2-2}{2}
         指导教师            & \usstthesis@mentor    \\ \clineB{2-2}{2}
-        完成日期            &  \usstthesis@date     \\ \clineB{2-2}{2}
+        完成日期            & \usstthesis@date      \\ \clineB{2-2}{2}
         \end{tabular}
     \end{textblock}
 \end{center}
